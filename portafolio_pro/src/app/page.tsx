@@ -1,13 +1,29 @@
 /* import Image from "next/image"; */
 
 import LeftBack from "@/components/leftBack";
+import RightBack from "@/components/rightBack";
 
 export default function Home() {
   return (
-<div className="grid grid-cols-1 md:grid-cols-[1fr_2.5fr] grid-rows-1 gap-4 p-4 md:p-12 ">
-  <div><LeftBack /></div>
-  <div>2</div>
+<div className="md:grid md:grid-cols-[1.5fr_3fr] h-screen overflow-hidden">
+  {/* LeftBack fijo en desktop, normal en mobile */}
+  <div className="md:relative hidden md:block">
+    <div className="fixed top-0 left-0 h-screen w-[40%] xl:w-[33%] bg-white z-10">
+      <LeftBack />
+    </div>
+  </div>
+
+  {/* LeftBack visible en mobile (no fixed) */}
+  <div className="block md:hidden">
+    <LeftBack />
+  </div>
+
+  {/* RightBack con scroll en desktop, normal en mobile */}
+  <div className="h-full overflow-y-auto md:ml-20 px-4">
+    <RightBack />
+  </div>
 </div>
+
 
   );
 }
