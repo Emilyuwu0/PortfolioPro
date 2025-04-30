@@ -77,6 +77,24 @@ body {
   }
 }
 
+.meet-button{
+  border-radius: 18px;
+  padding: 8px 12px;
+  border: 0.5px solid #8f8d96 ;
+  font-size: 12px;
+  background: #111111;
+}
+
+.hero-title{
+  font: normal 700 3.8rem ;
+  color: #6b5ea1;
+  background: #6b5ea1;
+  background: linear-gradient(90deg,rgb(159, 154, 255) 0%, rgba(102, 0, 255, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 /* 
 
 
@@ -130,32 +148,11 @@ body {
   font-family: "Dosis", sans-serif;
 }
 
-.button-profile {
-  display: block;
-  margin:auto;
-/*   width: 350px;
-  height: 55px; */
-  border-radius: 50px;
-  background-image: linear-gradient(135deg, #b09ffc  0%, #6d60ff  100%);
-/*   box-shadow: 0 10px 20px -6px rgba(238, 103, 97, 0.5); */
-  outline: none;
-  cursor: pointer;
-  border: none;
-  font-size: 16px;
-  color: white;
-  font-weight: 600;
+.backgroundButtons{
+  background: #111111 !important;
+  border: 1px solid #474747 !important;
+  margin-right: 10px !important;
 }
-
-.button-profile:hover {
-  transform: translateY(3px);
-  box-shadow: none;
-}
-
-.button-profile:active {
-  opacity: 0.5;
-}
-
-
 
 
 /* 

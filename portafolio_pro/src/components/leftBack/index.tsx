@@ -3,6 +3,7 @@ import Kitty from "@/assets/cat.png";
 import Profile from "@/assets/profile.jpg";
 import Linkedin from "@/assets/linkedin.png";
 import Instagram from "@/assets/ig.png";
+import Button from "@/components/Ui/Button";
 import "../../app/globals.css";
 
 export default function LeftBack() {
@@ -58,9 +59,12 @@ export default function LeftBack() {
           </div>
 
           <div className="mt-4">
-            <button className="button-profile w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300 text-sm">
-              ¡Trabajemos juntos!
-            </button>
+      <Button colorClass="w-full ">
+            ¡Trabajemos juntos!
+      </Button>
+       {/*      <button className="button-profile w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300 text-sm">
+          
+            </button> */}
           </div>
         </div>
       </div>
