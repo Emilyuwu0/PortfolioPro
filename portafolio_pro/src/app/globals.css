@@ -6,10 +6,7 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
   --base-tint--dark: #161616;
   --stroke-elements--dark: #303033;
 }
@@ -35,7 +32,7 @@ body {
 }
 
 .radius {
-  border-radius: 2rem;
+  border-radius: 2rem !important;
 
 }
 
@@ -61,11 +58,12 @@ body {
 
 .scroll-indicator {
   position: absolute;
-  bottom: var(--spacing-xl);
-  right: var(--spacing-xl);
+
+  right: 4rem;
   width: 100px;
   height: 100px;
-  animation: spin 10s linear infinite;
+
+  top: 43rem;
 }
 
 @keyframes spin {
@@ -161,7 +159,7 @@ body {
  <-------------------- Background gradiente ------------------>
  
 
-*/
+
 .gradient-background {
   position: fixed;
   top: 0;
@@ -336,4 +334,4 @@ body {
     width: 425px;
     height: 425px;
   }
-}
+}*/

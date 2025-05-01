@@ -1,42 +1,107 @@
 /*************  ✨ Windsurf Command ⭐  *************/
 import Link from 'next/link';
+import Button from "@/components/Ui/Button";
 
 export default function Navbar() {
   return (
-    <nav className="w-full px-6 py-4  text-white">
-    <div className="max-w-7xl mx-auto flex items-center justify-between">
-      
+    <>
+      {/* Navbar fijo */}
+      <div className=" top-10  fixed w-full max-w-7xl px-6 z-50">
+        <nav className="-lg  text-white ">
+          <div className="flex items-center justify-between">
+            <ul className="flex space-x-8 items-center font-medium">
+              <li>
+                <a
+                  href="#"
+                  className="px-4 py-2 rounded-full border border-white text-white font-semibold"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  About Me
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-white">
+                  Resume
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-500 hover:text-white">
+                  Contact
+                </a>
+              </li>
+             
+            </ul>
+            <Button>Vamos!</Button>
+          </div>
+        </nav>
+      </div>
 
-      <ul className="flex space-x-8 items-center font-medium">
-        <li>
-          <a href="#" className="px-4 py-2 rounded-full border border-white text-white font-semibold">
-            Home
-          </a>
-        </li>
-        <li><a href="#" className="text-gray-400 hover:text-white">Portfolio</a></li>
-        <li><a href="#" className="text-gray-400 hover:text-white">About Me</a></li>
-        <li><a href="#" className="text-gray-400 hover:text-white">Resume</a></li>
-        <li><a href="#" className="text-gray-500 hover:text-white">Contact</a></li>
-        <li>
+      {/* Contenido debajo del navbar fijo */}
+      <div className="pt-60 px-6">
 
-          <button className="text-white hover:text-yellow-400 transition">
-            🌞
-          </button>
-        </li>
-      </ul>
+              {/*Primera seccion*/}
+        <div >
+          <div className="w-full rounded-lg ">
+          <div>
+            <button className="meet-button mb-4 text-sm sm:text-base">
+              <span>⋆ </span>
+              Comenzemos
+            </button>
   
-
-      <button className="ml-6 px-5 py-2 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 text-black font-semibold flex items-center gap-2 shadow-md hover:brightness-110">
-        Let's Talk
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M17 8h2a2 2 0 0 1 2 2v10l-4-4H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h8" />
-        </svg>
-      </button>
+            <div className="hero-section">
+              <h1 className="hero-title text-3xl sm:text-5xl lg:text-6xl font-semibold leading-tight sm:leading-tight lg:leading-tight">
+                I'm Emily Orduz
+                <br />
+                Ux and
+                <br />
+                Frontend Developer.
+              </h1>
   
-    </div>
-  </nav>
-    );
-  }  
-
+              <div className="flex justify-start w-52 mt-12">
+                <Button colorClass="backgroundButtons">Trabajos</Button>
+                <Button colorClass="backgroundButtons mr-4">Curriculum</Button>
+              </div>
+            </div>
+  
+            <div className=" mt-16 flex justify-center">
+              <svg viewBox="0 0 100 100" className="w-24 h-24">
+                <path
+                  d="M50,10 a40,40 0 1,1 0,80 a40,40 0 1,1 0,-80"
+                  fill="none"
+                  stroke="#f0f0f0"
+                  strokeWidth="2"
+                />
+                <text
+                  x="50%"
+                  y="50%"
+                  textAnchor="middle"
+                  dominantBaseline="middle"
+                  fill="#f0f0f0"
+                  fontSize="8"
+                >
+                  SCROLL FOR MORE
+                </text>
+                <path
+                  d="M50,86 L50,94 L45,89 M50,94 L55,89"
+                  stroke="#f0f0f0"
+                  strokeWidth="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

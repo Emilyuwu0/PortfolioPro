@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Kitty from "@/assets/cat.png";
+import Kitty from "@/assets/bear.webp";
 import Profile from "@/assets/profile.jpg";
 import Linkedin from "@/assets/linkedin.png";
 import Instagram from "@/assets/ig.png";
@@ -21,7 +21,7 @@ export default function LeftBack() {
   ];
 
   return (
-    <div className="flex flex-col items-start justify-center h-full max-w-sm mx-auto">
+    <div className="flex flex-col items-start justify-center h-full max-w-sm mx-auto ">
       <div className="flex flex-col items-start justify-center w-full h-full">
         <div className="w-full rounded-lg p-6 backgroundSecondary radius">
           <div className="flex items-center justify-start mb-4">
@@ -34,13 +34,13 @@ export default function LeftBack() {
           </div>
 
           <div className="radius mx-auto mb-6">
-            <Image src={Profile} alt="Profile" className="w-full h-auto rounded-md" />
+            <Image src={Profile} alt="Profile" className="w-full h-auto rounded-xl" />
           </div>
 
-          <div className="text-sm">
-            <h5 className="font-medium">Especialización:</h5>
+          <div >
+            <h5 className="font-medium text-sm">Especialización:</h5>
             <h6 className="font-bold mb-4">UI/UX designer<br />Frontend developer</h6>
-            <h5 className="font-medium">Localización:</h5>
+            <h5 className="font-medium text-sm">Localización:</h5>
             <h6 className="font-bold mb-4">Bogotá - Colombia</h6>
           </div>
 
@@ -53,7 +53,7 @@ export default function LeftBack() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src={social.img} alt={social.name} className="w-4 h-4" />
+                <Image src={social.img} alt={social.name} className="w-4 h-4 " />
               </a>
             ))}
           </div>

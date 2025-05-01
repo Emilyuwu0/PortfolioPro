@@ -5,56 +5,57 @@ import "../../app/globals.css";
 
 export default function RightBack() {
   return (
-    <div className="">
+    <div className="mt-10   ">
       <Navbar />
-      <div>
-        <button className="meet-button mb-4">
-          <span>⋆ </span>
-          Comenzemos
-        </button>
 
-        <div className="hero-section">
-          <h1 className="hero-title text-6xl font-semibold">
-            I'm Emily Orduz
-            <br />
-            Ux and
-            <br />
-            Frontend Developer.
-          </h1>
+      <div className="mt-40 ml-8">
+        {/*   Second Section */}
 
-          <div className="flex justify-start w-52 mt-10">
-            <Button colorClass="backgroundButtons">Trabajos</Button>
-            <Button colorClass="backgroundButtons mr-4">Curriculum</Button>
+        <div>
+          <button className="meet-button mb-4 text-sm sm:text-base">
+            <span>⋆ </span>
+            Portafolio
+          </button>
+          <h3 className="hero-title text-3xl sm:text-5xl lg:text-5xl font-semibold leading-tight sm:leading-tight lg:leading-tight mb-8">Mis proyectos destacados</h3>
+
+          <div className="grid grid-cols-2 grid-rows-2 gap-6">
+            <div className="w-full rounded-lg p-6 backgroundSecondary radius">1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
           </div>
         </div>
 
-        <div className="scroll-indicator">
-          <svg viewBox="0 0 100 100">
-            <path
-              d="M50,10 a40,40 0 1,1 0,80 a40,40 0 1,1 0,-80"
-              fill="none"
-              stroke="#f0f0f0"
-              stroke-width="2"
-            />
-            <text
-              x="50%"
-              y="50%"
-              text-anchor="middle"
-              dominant-baseline="middle"
-              fill="#f0f0f0"
-              font-size="8"
-            >
-              SCROLL FOR MORE
-            </text>
-            <path
-              d="M50,86 L50,94 L45,89 M50,94 L55,89"
-              stroke="#f0f0f0"
-              stroke-width="2"
-              fill="none"
-            />
-          </svg>
+        <div>
+          <button className="meet-button mb-4 text-sm sm:text-base">
+            <span>⋆ </span>
+            Sobre mi
+          </button>
+          <h2>NAme</h2>
+          <div className="grid grid-cols-3 grid-rows-1 gap-6">
+            <div>1</div>
+            <div>2</div>
+            <div>5</div>
+          </div>
+
+          <div className="grid grid-cols-3 grid-rows-1 gap-6">
+            <div>1</div>
+            <div>2</div>
+          </div>
         </div>
-      </div>
+
+        <div>
+        <button className="meet-button mb-4 text-sm sm:text-base">
+            <span>⋆ </span>
+           Educación
+          </button>  
+
+          <h2>asdsad</h2>
+        </div>
+        
+        
+        
+             </div>
     </div>
   );
 }
