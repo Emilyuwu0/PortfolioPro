@@ -43,7 +43,7 @@ body {
   margin-bottom: 0.8rem;
 }
 
-.avatar-profile{
+.avatar-profile {
   position: fixed;
   top: 3rem;
   left: 3rem;
@@ -68,28 +68,51 @@ body {
 
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-.meet-button{
+.meet-button {
   border-radius: 18px;
   padding: 8px 12px;
-  border: 0.5px solid #8f8d96 ;
+  border: 0.5px solid #8f8d96;
   font-size: 12px;
   background: #111111;
 }
 
-.hero-title{
-  font: normal 700 3.8rem ;
+.hero-title {
+  font: normal 700 3.8rem;
   color: #6b5ea1;
   background: #6b5ea1;
-  background: linear-gradient(90deg,rgb(159, 154, 255) 0%, rgba(102, 0, 255, 1) 100%);
+  background: linear-gradient(90deg, rgb(159, 154, 255) 0%, rgba(102, 0, 255, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.paddingContainer {
+  padding: 0rem 2rem 2rem 0rem; /* Para pantallas pequeñas */
+}
+
+@media (min-width: 640px) {
+  .paddingContainer {
+    padding: 0rem 4rem 2rem 0rem; /* Para pantallas medianas (sm) */
+  }
+}
+
+@media (min-width: 768px) {
+  .paddingContainer {
+    padding: 0rem 6rem 2rem 0rem; /* Para pantallas grandes (md) */
+  }
+}
+
+@media (min-width: 1024px) {
+  .paddingContainer {
+    padding: 0rem 10rem 2rem 0rem; /* Para pantallas extra grandes (lg) */
+  }
 }
 
 
@@ -123,11 +146,9 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%);
   transform: scale(0);
   transition: transform 0.5s ease;
 }
@@ -146,12 +167,43 @@ body {
   font-family: "Dosis", sans-serif;
 }
 
-.backgroundButtons{
+.backgroundButtons {
   background: #111111 !important;
   border: 1px solid #474747 !important;
   margin-right: 10px !important;
 }
 
+
+.backgroundCardPort {
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-image: url("https://i.pinimg.com/736x/7b/ba/94/7bba9438553554af7ffdd005974016bc.jpg");
+}
+
+.backgroundCardPortTwo {
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-image: url("https://i.pinimg.com/736x/7b/ba/94/7bba9438553554af7ffdd005974016bc.jpg");
+}
+
+.backgroundDivAbout {
+  border-radius: 2rem;
+  border: 1px solid #474747 !important;
+  display: flex;
+  flex-direction: column;
+  background: #161616;
+  align-items: center;
+}
+
+
+.backgroundTools{
+  border-radius: 1rem;
+  border: 1px solid #474747 !important;
+}
 
 /* 
 
