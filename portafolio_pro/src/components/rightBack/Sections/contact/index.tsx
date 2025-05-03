@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="py-6 px-4 mt-20">
+    <section className="py-6 px-4 mt-20" id="contact">
            <button className="meet-button mb-4 text-sm sm:text-base">
         <span>⋆ </span>
         Contacto

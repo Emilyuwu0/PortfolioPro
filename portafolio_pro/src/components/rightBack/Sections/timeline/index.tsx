@@ -1,3 +1,4 @@
+import SlideUpSection from "@/components/Util";
 export default function Timeline() {
   const Activity = [
     {
@@ -6,7 +7,7 @@ export default function Timeline() {
         name: " UX/UI, Frontend Developer",
         date: "Ene. 2025 - Actualidad",
         item: "Freelance",
-        description:""
+  
     },
 
     {
@@ -14,39 +15,40 @@ export default function Timeline() {
         name: "CMS, UX/UI, Frontend Developer",
         date: "Sept. 2024 - Dic. 2024",
         item: "Kickoff Advertising  · Jornada completa",
-        description:"- Reestructuración y optimización de proyectos basados en CMS para mejorar rendimiento, funcionalidad y experiencia de usuario. •	Desarrollo de interfaces y funcionalidades frontend, asegurando código limpio, eficiente y modular.•	Diseño y desarrollo de plataformas web adaptativas, garantizando una experiencia óptima tanto en dispositivos móviles como en escritorio."
     },
     {
       id: "2",
       name: "Frontend Developer",
       date: "Oct. 2022 - Ene, 2024",
-      item: "AntPack · Jornada completa",  description:""
+      item: "AntPack · Jornada completa"
     },
     {
       id: "3",
       name: "Frontend Developer",
       date: "Ene. 2021 - Oct. 2022",
-      item: "IPCOM · Jornada completa",  description:""
+      item: "IPCOM · Jornada completa", 
     },
     {
       id: "4",
       name: "Junior Frontend",
       date: "Setp. 2020 - Nov. 2020",
-      item: "Pyra Lab · Jornada completa",  description:""
+      item: "Pyra Lab · Jornada completa",  
     },
     {
       id: "5",
       name: "Junior Frontend",
       date: "Mar. 2020 - Sept. 2020",
-      item: "Chefmenu · Jornada completa",  description:""
+      item: "Chefmenu · Jornada completa", 
     },
   ];
   return (
-    <div>
-      <button className="meet-button mb-4 text-sm sm:text-base">
+    <div id="resume">
+      <SlideUpSection>
+            <button className="meet-button mb-4 text-sm sm:text-base">
         <span>⋆ </span>
         Resumen
       </button>
+      </SlideUpSection>      <SlideUpSection delay={200}>
       <h3 className="hero-title text-3xl sm:text-5xl lg:text-5xl font-semibold leading-tight sm:leading-tight lg:leading-tight mb-8">
         Educación
       </h3>
@@ -72,9 +74,12 @@ export default function Timeline() {
           </div>
         </div>
       </section>
+      </SlideUpSection>  <SlideUpSection delay={400}>
       <h3 className="mt-20 hero-title text-3xl sm:text-5xl lg:text-5xl font-semibold leading-tight sm:leading-tight lg:leading-tight mb-8">
         Experiencia Laboral
       </h3>
+
+    
       <section className="py-10">
         <div className="space-y-8">
           {Activity.map(({ id, name, date, item , description}) => (
@@ -86,16 +91,17 @@ export default function Timeline() {
 
               <div className="flex items-start gap-2">
                 <div>
-                  <h3 className="font-semibold text-white">{name}</h3>
-                  <p className="text-sm text-gray-400">{item}</p>
+                  <h3 className="font-semibold text-md text-white">{name}</h3>
+
                 </div>
               </div>
 
-              <div className="text-gray-400 italic">{description}</div>
+              <p className="text-sm text-gray-400">{item}</p>
             </div>
           ))}
         </div>
       </section>
+      </SlideUpSection>
     </div>
   );
 }

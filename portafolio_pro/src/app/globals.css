@@ -177,7 +177,7 @@ body {
 .backgroundCardPort {
   border-radius: 2rem;
   width: 100%;
-  height: 100%;
+/*   height: 100%; */
   background-size: 100% 100%;
   background-image: url("https://i.pinimg.com/736x/7b/ba/94/7bba9438553554af7ffdd005974016bc.jpg");
 }
@@ -185,7 +185,7 @@ body {
 .backgroundCardPortTwo {
   border-radius: 2rem;
   width: 100%;
-  height: 100%;
+/*   height: 100%; */
   background-size: 100% 100%;
   background-image: url("https://i.pinimg.com/736x/7b/ba/94/7bba9438553554af7ffdd005974016bc.jpg");
 }
@@ -204,6 +204,37 @@ body {
   border-radius: 1rem;
   border: 1px solid #474747 !important;
 }
+
+
+
+
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #441f63; /* gray-600 */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280; /* gray-500 */
+}
+
+/* Para Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 transparent;
+}
+
+
+
 
 /* 
 
