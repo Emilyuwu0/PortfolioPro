@@ -134,10 +134,11 @@ export default function Projects() {
         Portafolio
       </button>
     </SlideUpSection> 
+    <SlideUpSection delay={550}>
       <h3 className="hero-title text-3xl sm:text-5xl font-semibold mb-8">
         Mis proyectos destacados
       </h3>
-
+      </SlideUpSection> 
       <div className="grid grid-cols-2 grid-rows-1 gap-6 mb-36">
         {[
           { label: "Frontend Dev", data: frontendProjects },

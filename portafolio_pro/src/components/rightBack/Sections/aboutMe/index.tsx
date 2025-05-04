@@ -8,36 +8,37 @@ export default function AboutMe() {
           Sobre mi
         </button>
       </SlideUpSection>
+      <SlideUpSection delay={200}>
       <h3 className="hero-title text-3xl sm:text-5xl lg:text-5xl font-semibold leading-tight sm:leading-tight lg:leading-tight mb-8">
         Transformo ideas complejas en interfaces simples y funcionales
       </h3>
-
+      </SlideUpSection>
       <div className="grid grid-cols-3 grid-rows-1 gap-6">
-        <SlideUpSection delay={200}>
+        <SlideUpSection delay={400}>
           <div className="backgroundDivAbout mb-10 p-8">
-            <span className="block hero-title text-5xl font-semibold leading-tight sm:leading-tight lg:leading-tight">
+            <span className="block hero-title text-5xl font-semibold leading-tight sm:leading-tight lg:leading-tight text-center">
               {" "}
               12+
             </span>
-            <span>Proyectos realizados</span>
+            <span className="text-center">Proyectos realizados</span>
           </div>
         </SlideUpSection>
-        <SlideUpSection delay={400}>
+        <SlideUpSection delay={600}>
         <div className="backgroundDivAbout mb-10  p-8">
-          <span className="block hero-title text-5xl font-semibold leading-tight sm:leading-tight lg:leading-tight">
+          <span className="block hero-title text-5xl font-semibold leading-tight sm:leading-tight lg:leading-tight text-center">
             {" "}
             2+
           </span>
-          <span> Años de experiencia</span>{" "}
+          <span className="text-center"> Años de experiencia</span>{" "}
         </div>
         </SlideUpSection>
         <SlideUpSection delay={800}>
         <div className="backgroundDivAbout  mb-10  p-8">
-          <span className="block hero-title text-5xl font-semibold leading-tight sm:leading-tight lg:leading-tight">
+          <span className="block hero-title text-5xl font-semibold leading-tight sm:leading-tight lg:leading-tight text-center">
             {" "}
             4+{" "}
           </span>
-          <span>Empresas colaboradoras</span>{" "}
+          <span className="text-center">Empresas colaboradoras</span>{" "}
         </div>
         </SlideUpSection>
 
@@ -45,6 +46,7 @@ export default function AboutMe() {
 
       <div className="grid grid-cols-3 gap-6">
         <div className="col-span-2">
+      <SlideUpSection delay={900}>
           <span className="block text-center sm:text-left bg-pink-soft-color">
             Soy una desarrolladora frontend con una sólida experiencia en la
             creación de interfaces de usuario intuitivas y visualmente
@@ -57,8 +59,10 @@ export default function AboutMe() {
             cumplan con los requisitos funcionales, sino que también
             proporcionen una experiencia de usuario excepcional.
           </span>
+        </SlideUpSection>
         </div>
         <div>
+        <SlideUpSection delay={1100}>
           <ul className="ml-2">
             <li>
               <span className="text-sm">Nombre:</span>
@@ -87,6 +91,7 @@ export default function AboutMe() {
               <span className="text-md font-bold block"> Inglés A2</span>
             </li>
           </ul>
+        </SlideUpSection>
         </div>
       </div>
     </div>

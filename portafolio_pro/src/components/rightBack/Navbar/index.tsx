@@ -73,7 +73,7 @@ export default function Navbar() {
 
               <SlideUpSection delay={600}> 
               <div className="flex justify-start w-52 mt-12" id="home">
-                <Button colorClass="backgroundButtons">Trabajos</Button>
+                <Button colorClass="backgroundButtons" >Trabajos</Button>
                 <Button colorClass="backgroundButtons mr-4">Curriculum</Button>
               </div>       
                   </SlideUpSection>

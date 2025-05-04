@@ -38,9 +38,9 @@ export default function Modal({ projects, onClose, label }: ModalProps) {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-purple-800 mt-2 inline-block"
+             className="button-profile mt-4 text-gray-900 px-6 py-3 w-28 rounded-full  transition duration-300 flex items-center space-x-2 "
               >
-                Ver proyecto →
+                Ver  →
               </a>
             </div>
           ))}

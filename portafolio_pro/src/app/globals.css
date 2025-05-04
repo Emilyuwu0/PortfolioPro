@@ -191,18 +191,18 @@ body {
 }
 
 .backgroundDivAbout {
+  background-color: rgba(36, 40, 50, 1);
   border-radius: 2rem;
-  border: 1px solid #474747 !important;
+/*   border: 1px solid #474747 !important; */
   display: flex;
   flex-direction: column;
-  background: #161616;
+  background-image: linear-gradient(0deg, #161616 0% 0%, #2d175f15 100%);
   align-items: center;
 }
 
 
 .backgroundTools{
-  border-radius: 1rem;
-  border: 1px solid #474747 !important;
+  background-image: linear-gradient(0deg, #161616 0% 0%, #2e2e2e29 100%);
 }
 
 

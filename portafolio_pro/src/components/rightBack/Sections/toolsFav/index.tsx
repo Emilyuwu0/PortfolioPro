@@ -36,9 +36,11 @@ export default function Tools() {
   ];
   return (
     <section className="py-6 px-4 mt-20">
+            <SlideUpSection delay={200}>
       <span className=" text-2xl sm:text-3xl lg:text-3xl font-semibold leading-tight sm:leading-tight lg:leading-tight mb-8">
         Mis herramientas favoritas
       </span>
+      </SlideUpSection>
       <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-6 mt-8">
   {toolsArray.map((tool, index) => (
     <SlideUpSection key={index} delay={index * 0.1}>

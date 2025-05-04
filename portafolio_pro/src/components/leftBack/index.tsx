@@ -21,50 +21,47 @@ export default function LeftBack() {
   ];
 
   return (
-    <div className="flex flex-col items-start justify-center h-full max-w-sm mx-auto ">
-      <div className="flex flex-col items-start justify-center w-full h-full">
-        <div className="w-full rounded-lg p-6 backgroundSecondary radius">
-          <div className="flex items-center justify-start mb-4">
-            <Image src={Kitty} alt="Kitty" className="w-12 h-12" />
-            <h2 className="text-2xl font-bold ml-2 leading-tight">
+    <div className="flex flex-col items-center justify-center h-full w-full p-4 xl:px-20">
+      <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-sm xl:max-w-sm">
+        <div className="rounded-lg p-6 backgroundSecondary radius shadow-lg">
+          <div className="flex items-center mb-4">
+            <Image src={Kitty} alt="Kitty" className="w-12 h-12 object-cover" />
+            <h2 className="text-2xl font-bold ml-3 leading-tight">
               Emily
               <br />
               Orduz
             </h2>
           </div>
 
-          <div className="radius mx-auto mb-6">
+          <div className="mb-6">
             <Image src={Profile} alt="Profile" className="w-full h-auto rounded-xl" />
           </div>
 
-          <div >
+          <div className="mb-6">
             <h5 className="font-medium text-sm">Especialización:</h5>
             <h6 className="font-bold mb-4">UI/UX designer<br />Frontend developer</h6>
             <h5 className="font-medium text-sm">Localización:</h5>
-            <h6 className="font-bold mb-4">Bogotá - Colombia</h6>
+            <h6 className="font-bold">Bogotá - Colombia</h6>
           </div>
 
-          <div className="flex mb-6">
+          <div className="flex flex-wrap gap-2 mb-6">
             {socialLinks.map((social) => (
               <a
-                className="button-elegant mr-2"
                 key={social.name}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="button-elegant w-9 h-9 flex items-center justify-center rounded-full"
               >
-                <Image src={social.img} alt={social.name} className="w-4 h-4 " />
+                <Image src={social.img} alt={social.name} className="w-4 h-4" />
               </a>
             ))}
           </div>
 
-          <div className="mt-4">
-      <Button colorClass="w-full ">
-            ¡Trabajemos juntos!
-      </Button>
-       {/*      <button className="button-profile w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300 text-sm">
-          
-            </button> */}
+          <div>
+            <a href="#contact">
+              <Button colorClass="w-full">¡Trabajemos juntos!</Button>
+            </a>
           </div>
         </div>
       </div>
