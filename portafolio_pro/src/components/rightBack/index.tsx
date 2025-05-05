@@ -12,11 +12,11 @@ import "../../app/globals.css";
 
 export default function RightBack() {
   return (
-    <div className="mt-10">
+    <div >
   <Navbar />
 
   <div className="mt-40 ml-8 sm:ml-4 md:ml-6 lg:ml-8 xl:ml-10 paddingContainer">
-    {/* Second Section */}
+
     <div>
       <Projects />
     </div>

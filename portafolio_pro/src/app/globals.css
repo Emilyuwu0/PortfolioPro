@@ -25,7 +25,9 @@ body {
   color: var(--foreground);
   font-family: "Poppins", sans-serif;
 }
-
+.colorPrincipal{
+  background: #111;
+}
 .backgroundSecondary {
   background: var(--base-tint--dark);
   border: 1px solid var(--stroke-elements--dark);

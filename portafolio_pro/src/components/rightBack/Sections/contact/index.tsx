@@ -22,7 +22,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="mb-60">
+    <div className="mb-60" id="contact">
       <div className="w-full max-w-4xl">
         <div className="mt-40 mb-4">
           <SlideUpSection>
