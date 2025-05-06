@@ -21,9 +21,29 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      <body
-       className={poppins.className}
-      > 
+   <body className={`${poppins.className} gradient-background`}>
+   <div className="gradient-background">
+  <div
+    className="blur"
+    style={{
+      transform: 'translate3d(-387.248px, -27.082px, 0) rotate(14.8028deg)',
+    }}
+  />
+  <div
+    className="blur"
+    style={{
+      transform: 'translate3d(188.13px, 9.0605px, 0) rotate(136.926deg)',
+    }}
+  />
+  <div
+    className="blur"
+    style={{
+      transform: 'translate3d(-247.968px, 122.203px, 0) rotate(-6.2694deg)',
+    }}
+  />
+</div>
+
+
    {/*     <div className="gradient-background">
       <div
         className="blur"

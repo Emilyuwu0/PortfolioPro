@@ -60,9 +60,8 @@ export default function Navbar() {
   </nav>
 </div>
 
-
-      {/* Hero Section */}
-      <div className="pt-60 px-6">
+<div className="overflow-y-auto h-full">
+     <div className="pt-60 px-6">
         <div className="w-full rounded-lg">
           <div>
             <SlideUpSection>
@@ -95,6 +94,9 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+</div>
+      {/* Hero Section */}
+   
     </div>
   );
 }

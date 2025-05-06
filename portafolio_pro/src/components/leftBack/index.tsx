@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Kitty from "@/assets/bear.webp";
+import Kitty from "@/assets/crystal.png";
 import Profile from "@/assets/profile.jpg";
 import Linkedin from "@/assets/linkedin.png";
 import Instagram from "@/assets/ig.png";
@@ -51,7 +51,7 @@ export default function LeftBack() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button-elegant w-9 h-9 flex items-center justify-center rounded-full"
+                className="button-elegant  flex items-center justify-center rounded-full"
               >
                 <Image src={social.img} alt={social.name} className="w-4 h-4" />
               </a>
