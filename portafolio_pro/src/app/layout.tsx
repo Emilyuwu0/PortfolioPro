@@ -4,13 +4,13 @@ import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['400', '600', '700'], // Elige los que vayas a usar
+  weight: ['400', '600', '700'], 
   display: 'swap',
 });
 
 export const metadata: Metadata = {
   title: "Portfolio Emi",
-  description: "Portfolio web",
+  description: "Explora el portafolio de Emily Orduz, desarrolladora frontend especializada en React, Astro y diseño web responsive. Descubre proyectos modernos, UI atractivas y soluciones creativas para la web",
 };
 
 export default function RootLayout({
