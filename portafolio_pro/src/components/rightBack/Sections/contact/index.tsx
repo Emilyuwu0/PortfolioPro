@@ -2,14 +2,16 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 import SlideUpSection from "@/components/Util";
+import emailjs from "@emailjs/browser";
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
-    company: "",
     email: "",
-    phone: "",
     message: "",
   });
+
+  const [alert, setAlert] = useState({ show: false, type: "", message: "" });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,8 +19,34 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission logic here
+
+    emailjs
+      .send(
+        "service_t97ts06",
+        "template_sdl3951",
+        formData,
+        "wbVplkvciII0N5QT_"
+      )
+      .then(() => {
+        setAlert({
+          show: true,
+          type: "success",
+          message: "Mensaje enviado correctamente! 🤍",
+        });
+        setFormData({ name: "", email: "", message: "" });
+
+        setTimeout(() => setAlert({ show: false, type: "", message: "" }), 3000);
+      })
+      .catch((error) => {
+        console.error("Error al enviar el mensaje:", error);
+        setAlert({
+          show: true,
+          type: "error",
+          message: "Hubo un error. Intenta de nuevo. ✖",
+        });
+
+        setTimeout(() => setAlert({ show: false, type: "", message: "" }), 3000);
+      });
   };
 
   return (
@@ -30,29 +58,42 @@ export default function ContactForm() {
               <span>⋆ </span>
               Contactame
             </button>
-          </SlideUpSection>{" "}
+          </SlideUpSection>
         </div>
+
         <SlideUpSection delay={200}>
-        <h4 className=" text-2xl sm:text-3xl lg:text-3xl font-semibold leading-tight sm:leading-tight lg:leading-tight mb-12">
-          ¡Hagamos algo increíble juntos!
-        </h4>
+          <h4 className="text-2xl sm:text-3xl lg:text-3xl font-semibold mb-12">
+            ¡Hagamos algo increíble juntos!
+          </h4>
         </SlideUpSection>
-        <div className="w-full">
+
+        {/* Alerta */}
+        {alert.show && (
+          <div
+            className={`mb-6 px-4 py-3 rounded-lg text-sm transition-all duration-300 ${
+              alert.type === "success"
+                ? "bg-violet-400 text-white"
+                : "bg-fuchsia-300 text-white"
+            }`}
+          >
+            {alert.message}
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-        <SlideUpSection delay={400}>
+            <SlideUpSection delay={400}>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Tu Nombre"
+                required
                 className="w-full bg-transparent border-b border-gray-500 p-2 text-white focus:outline-none focus:border-purple-300"
               />
-                      </SlideUpSection>
-            </div>
+            </SlideUpSection>
 
-            <div>
             <SlideUpSection delay={600}>
               <input
                 type="email"
@@ -60,37 +101,40 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Tu Email"
+                required
                 className="w-full bg-transparent border-b border-gray-500 p-2 text-white focus:outline-none focus:border-purple-300"
-              /> </SlideUpSection>
-            </div>
+              />
+            </SlideUpSection>
           </div>
 
           <div className="mt-8">
-          <SlideUpSection delay={800}>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Escribeme tu mensaje"
-              rows={4}
-              className="w-full bg-transparent border-b border-gray-500 p-2 text-white focus:outline-none focus:border-purple-300 resize-none"
-            /> </SlideUpSection>
+            <SlideUpSection delay={800}>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Escríbeme tu mensaje"
+                rows={4}
+                required
+                className="w-full bg-transparent border-b border-gray-500 p-2 text-white focus:outline-none focus:border-purple-300 resize-none"
+              />
+            </SlideUpSection>
           </div>
 
           <div className="mt-12">
-          <SlideUpSection delay={100}>
-            <button
-              onClick={handleSubmit}
-              className="button-profile text-gray-900 px-6 py-3 rounded-full  transition duration-300 flex items-center space-x-2 "
-            >
-              <span className=" flex items-center font-medium ">
-                Enviar mensaje
-                <Send size={18} className="ml-2" />
-              </span>
-            </button></SlideUpSection>
+            <SlideUpSection delay={100}>
+              <button
+                type="submit"
+                className="button-profile text-gray-900 px-6 py-3 rounded-full transition duration-300 flex items-center space-x-2"
+              >
+                <span className="flex items-center font-medium">
+                  Enviar mensaje
+                  <Send size={18} className="ml-2" />
+                </span>
+              </button>
+            </SlideUpSection>
           </div>
-
-        </div>
+        </form>
       </div>
     </div>
   );

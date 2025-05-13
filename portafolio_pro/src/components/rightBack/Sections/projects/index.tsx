@@ -135,7 +135,7 @@ export default function Projects() {
       </button>
     </SlideUpSection> 
     <SlideUpSection delay={550}>
-      <h3 className="hero-title text-3xl sm:text-5xl font-semibold mb-8">
+      <h3 className="hero-title text-3xl sm:text-5xl font-semibold mb-8" id="works">
         Mis proyectos destacados
       </h3>
       </SlideUpSection> 
