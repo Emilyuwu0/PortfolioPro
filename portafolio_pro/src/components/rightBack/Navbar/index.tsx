@@ -5,6 +5,7 @@ import SlideUpSection from "@/components/Util";
 
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [scrolled, setScrolled] = useState(false); 
 
   const navItems = [
     { label: "Home", href: "#home" },
@@ -21,7 +22,7 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+  
   return (
     <div className="pt-12">
 <div className="fixed top-0 w-5xl px-4 sm:px-6 z-50 transition-colors duration-300 md:block hidden">
