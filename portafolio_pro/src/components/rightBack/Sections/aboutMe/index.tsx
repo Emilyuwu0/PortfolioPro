@@ -44,56 +44,56 @@ export default function AboutMe() {
 
       </div>
 
-      <div className="grid grid-cols-3 gap-6">
-        <div className="col-span-2">
-      <SlideUpSection delay={900}>
-          <span className="block text-center sm:text-left bg-pink-soft-color">
-            Soy una desarrolladora frontend con una sólida experiencia en la
-            creación de interfaces de usuario intuitivas y visualmente
-            atractivas. Utilizo tecnologías modernas como React, Vue y Gatsby
-            para desarrollar aplicaciones web responsivas, centradas en la
-            accesibilidad y el rendimiento.
-            <br /> <br />
-            Mi objetivo es aplicar mis habilidades técnicas y conocimientos en
-            diseño para crear productos digitales de alta calidad que no solo
-            cumplan con los requisitos funcionales, sino que también
-            proporcionen una experiencia de usuario excepcional.
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div className="md:col-span-2 text-center md:text-left"> {/* Añadido text-center y md:text-left */}
+    <SlideUpSection delay={900}>
+      <span className="block bg-pink-soft-color">
+        Soy una desarrolladora frontend con una sólida experiencia en la
+        creación de interfaces de usuario intuitivas y visualmente
+        atractivas. Utilizo tecnologías modernas como React, Vue y Gatsby
+        para desarrollar aplicaciones web responsivas, centradas en la
+        accesibilidad y el rendimiento.
+        <br /> <br />
+        Mi objetivo es aplicar mis habilidades técnicas y conocimientos en
+        diseño para crear productos digitales de alta calidad que no solo
+        cumplan con los requisitos funcionales, sino que también
+        proporcionen una experiencia de usuario excepcional.
+      </span>
+    </SlideUpSection>
+  </div>
+  <div className="text-center md:text-left"> {/* Añadido text-center y md:text-left */}
+    <SlideUpSection delay={1100}>
+      <ul className="ml-2">
+        <li>
+          <span className="text-sm">Nombre:</span>
+          <span className="text-md font-bold block mb-4"> Emily Orduz</span>
+        </li>
+        <li>
+          <span className="text-sm"> Teléfono: </span>
+          <span className="text-md font-bold block mb-4">
+            {" "}
+            315 222 5986
           </span>
-        </SlideUpSection>
-        </div>
-        <div>
-        <SlideUpSection delay={1100}>
-          <ul className="ml-2">
-            <li>
-              <span className="text-sm">Nombre:</span>
-              <span className="text-md font-bold block mb-4"> Emily Orduz</span>
-            </li>
-            <li>
-              <span className="text-sm"> Teléfono: </span>
-              <span className="text-md font-bold block mb-4">
-                {" "}
-                315 222 5986
-              </span>
-            </li>
-            <li>
-              <span className="text-sm">Correo: </span>
-              <span className="text-md font-bold block mb-4">
-                {" "}
-                imemilyorduz@gmail.com
-              </span>
-            </li>
-            <li>
-              <span className="text-sm"> Idiomas: </span>
-              <span className="text-md font-bold block">
-                {" "}
-                Español (nativo){" "}
-              </span>
-              <span className="text-md font-bold block"> Inglés A2</span>
-            </li>
-          </ul>
-        </SlideUpSection>
-        </div>
-      </div>
+        </li>
+        <li>
+          <span className="text-sm">Correo: </span>
+          <span className="text-md font-bold block mb-4">
+            {" "}
+            imemilyorduz@gmail.com
+          </span>
+        </li>
+        <li>
+          <span className="text-sm"> Idiomas: </span>
+          <span className="text-md font-bold block">
+            {" "}
+            Español (nativo){" "}
+          </span>
+          <span className="text-md font-bold block"> Inglés A2</span>
+        </li>
+      </ul>
+    </SlideUpSection>
+  </div>
+</div>
     </div>
   );
 }

@@ -35,22 +35,22 @@ export default function Tools() {
     },
   ];
   return (
-    <section className="py-6 px-4 mt-20">
-            <SlideUpSection delay={200}>
-      <span className=" text-2xl sm:text-3xl lg:text-3xl font-semibold leading-tight sm:leading-tight lg:leading-tight mb-8">
-        Mis herramientas favoritas
-      </span>
+   <section className="py-6 px-4 mt-20">
+  <SlideUpSection delay={200}>
+ <span className="text-center text-2xl sm:text-3xl lg:text-3xl font-semibold leading-tight sm:leading-tight lg:leading-tight mb-8 md:text-left sm:text-center block">
+  Mis herramientas favoritas
+</span>
+  </SlideUpSection>
+  <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-6 mt-8 justify-center">
+    {toolsArray.map((tool, index) => (
+      <SlideUpSection key={index} delay={index * 0.1}>
+        <div className="m-auto w-32 h-24 backgroundTools rounded-xl flex flex-col items-center justify-center shadow-md hover:scale-105 transition-transform"> {/* m-auto aquí */}
+          <img src={tool.icon} alt={tool.name} className="w-10 h-10 mb-2" />
+          <span className="text-sm text-white">{tool.name}</span>
+        </div>
       </SlideUpSection>
-      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-6 mt-8">
-  {toolsArray.map((tool, index) => (
-    <SlideUpSection key={index} delay={index * 0.1}>
-      <div className="w-32 h-24 backgroundTools rounded-xl flex flex-col items-center justify-center shadow-md hover:scale-105 transition-transform">
-        <img src={tool.icon} alt={tool.name} className="w-10 h-10 mb-2" />
-        <span className="text-sm text-white">{tool.name}</span>
-      </div>
-    </SlideUpSection>
-  ))}
-</div>
-    </section>
+    ))}
+  </div>
+</section>
   );
 }

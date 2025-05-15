@@ -433,3 +433,69 @@ body {
 }
 
  */
+
+
+/* home.module.css */
+.container {
+  display: flex;
+  flex-direction: column; /* Apila las columnas en mobile */
+  min-height: 100vh;
+  padding-top: 0.5rem; /* Equivalente a pt-2 */
+}
+
+.leftColumn {
+  /* Se mostrará en mobile */
+}
+
+.rightColumn {
+  height: 100%;
+  overflow-y: auto;
+  padding-left: 1rem; /* Equivalente a px-4 */
+  padding-right: 1rem;
+}
+
+/* Media query para pantallas medianas (md) y superiores */
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr; /* Equivalente a md:grid-cols-[1.5fr_3fr] */
+    height: 100vh; /* Equivalente a md:h-screen */
+    overflow: hidden; /* Equivalente a md:overflow-hidden */
+    flex-direction: row; /* Asegura que no sea flex-direction: column */
+  }
+
+  .leftColumn {
+    position: relative; /* Equivalente a md:relative */
+  }
+
+  .leftColumn > div { /* Apunta al div hijo directo (el contenedor de LeftBack) */
+    position: fixed; /* Equivalente a fixed */
+    top: 0; /* Equivalente a top-0 */
+    left: 0; /* Equivalente a left-0 */
+    height: 100vh; /* Equivalente a h-screen */
+    width: 35%; /* Equivalente a w-[35%] */
+    z-index: 10; /* Equivalente a z-10 */
+  }
+
+  .rightColumn {
+    /* El ancho se gestiona por grid-template-columns */
+    height: 100%; /* Asegura que ocupe toda la altura de la grid row */
+    overflow-y: auto; /* Mantiene el scroll para la columna derecha */
+    padding-left: 1rem; /* Equivalente a px-4 */
+    padding-right: 1rem;
+  }
+}
+
+/* Media query para pantallas grandes (lg) */
+@media (min-width: 1024px) {
+  .leftColumn > div {
+    width: 30%; /* Equivalente a lg:w-[30%] */
+  }
+}
+
+/* Media query para pantallas extra grandes (xl) */
+@media (min-width: 1280px) {
+  .leftColumn > div {
+    width: 33%; /* Equivalente a xl:w-[33%] */
+  }
+}

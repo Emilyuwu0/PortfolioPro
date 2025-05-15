@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 type Project = {
   imgProject: string;
   name: string;
@@ -13,38 +15,78 @@ type ModalProps = {
 };
 
 export default function Modal({ projects, onClose, label }: ModalProps) {
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
-      <div className="bg-neutral-800 max-h-[80vh] overflow-y-auto rounded-xl p-6 w-full max-w-6xl shadow-lg relative">
-        <button onClick={onClose} className="absolute top-4 right-4 text-white text-xl">×</button>
-        <h2 className="hero-title text-2xl sm:text-2xl lg:text-2xl font-semibold mb-6 text-white">{label}</h2>
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-        {/* Scroll horizontal */}
-        <div className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar">
-          {projects.map((project, i) => (
-            <div
-              key={i}
-              className="min-w-[300px] sm:min-w-[350px] flex-shrink-0 border border-neutral-600 rounded-lg p-4 bg-neutral-900"
-            >
-              <img
-                src={project.imgProject}
-                alt={project.name}
-                className="rounded-md mb-2  w-96"
-              />
-              <h3 className="text-xl font-semibold text-white">{project.name}</h3>
-              <p className="text-sm text-neutral-400">{project.date}</p>
-              <p className="text-sm text-neutral-300">{project.description}</p>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-             className="button-profile mt-4 text-gray-900 px-6 py-3 w-28 rounded-full  transition duration-300 flex items-center space-x-2 "
-              >
-                Ver  →
-              </a>
-            </div>
-          ))}
+  const next = () => {
+    setCurrentIndex((prev) => (prev + 1) % projects.length);
+  };
+
+  const prev = () => {
+    setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
+  };
+
+  const current = projects[currentIndex];
+
+  const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center px-4"
+      onClick={handleOverlayClick}
+    >
+      <div className="relative w-full max-w-3xl flex flex-col items-center">
+        {/* Close */}
+        <button
+          onClick={onClose}
+          className="absolute rounded-full top-4 right-4 px-3 py-1 bg-gradient-to-br from-[#b09ffc] to-[#6d60ff] text-white outline-none border-none cursor-pointer hover:translate-y-1 hover:shadow-none active:opacity-50 transition-all flex items-center justify-center text-lg font-bold hover:scale-110 transition"
+        >
+          ×
+        </button>
+
+        {/* Counter */}
+        <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+          {currentIndex + 1} / {projects.length}
         </div>
+
+        {/* Image */}
+        <img
+          src={current.imgProject}
+          alt={current.name}
+          className="max-w-full max-h-[500px] rounded-lg mb-4 object-contain "
+        />
+
+        {/* Content */}
+        <div className="bg-neutral-900 text-white p-6 rounded-2xl shadow-lg w-full">
+          <h2 className="text-xl font-semibold mb-2">{current.name}</h2>
+          <p className="text-sm text-neutral-400 mb-2">{current.date}</p>
+          <p className="text-sm text-neutral-300 mb-6">{current.description}</p>
+          <a
+            href={current.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full px-4 py-2 bg-gradient-to-br from-[#b09ffc] to-[#6d60ff] text-white font-semibold text-sm outline-none border-none cursor-pointer hover:translate-y-1 hover:shadow-none active:opacity-50 transition-all"
+          >
+            Ver más
+          </a>
+        </div>
+
+
+        <button
+          onClick={prev}
+          className="cursor-pointer absolute left-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-br from-[#b09ffc] to-[#6d60ff] text-white w-8 h-8 rounded-full flex items-center justify-center hover:scale-110 transition"
+        >
+          ←
+        </button>
+        <button
+          onClick={next}
+          className="cursor-pointer absolute right-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-br from-[#b09ffc] to-[#6d60ff] text-white w-8 h-8 rounded-full flex items-center justify-center hover:scale-110 transition"
+        >
+          →
+        </button>
       </div>
     </div>
   );
