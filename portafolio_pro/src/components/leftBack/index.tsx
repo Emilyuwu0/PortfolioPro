@@ -1,22 +1,22 @@
 import Image from "next/image";
-import Kitty from "@/assets/crystal.png";
+import Kitty from "@/assets/crystal.webp";
 import Profile from "@/assets/profile.jpg";
-import Linkedin from "@/assets/linkedin.png";
-import Instagram from "@/assets/ig.png";
+import Linkedin from "@/assets/linkedin.webp";
+import GitHub from "@/assets/github.webp";
 import Button from "@/components/Ui/Button";
 import "../../app/globals.css";
 
 export default function LeftBack() {
   const socialLinks = [
     {
-      name: "Instagram",
+      name: "Linkedin",
       url: "https://www.linkedin.com/in/emily-tatiana-orduz-barrera-75968b152/",
       img: Linkedin,
     },
     {
-      name: "Twitter",
-      url: "https://www.instagram.com/im_emi.o/",
-      img: Instagram,
+      name: "GitHub",
+      url: "https://github.com/Emilyuwu0",
+      img: GitHub,
     },
   ];
 

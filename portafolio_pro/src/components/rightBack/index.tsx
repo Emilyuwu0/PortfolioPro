@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Button from "@/components/Ui/Button";
+
 import Navbar from "@/components/rightBack/Navbar";
 
 import Projects from "@/components/rightBack/Sections/projects";

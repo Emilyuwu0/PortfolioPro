@@ -127,7 +127,7 @@ export default function Projects() {
 
   ];
 
-  const otherProjects: Project[] = []; // Puedes llenar si tienes más categorías
+
 
   const handleOpenModal = (projects: Project[], label: string) => {
     setSelectedProjects(projects);

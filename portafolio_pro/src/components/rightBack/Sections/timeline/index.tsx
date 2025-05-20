@@ -83,7 +83,7 @@ export default function Timeline() {
 
         <section className="py-10">
           <div className="space-y-8">
-            {Activity.map(({ id, name, date, item, description }) => (
+            {Activity.map(({ id, name, date, item }) => (
               <div
                 key={id}
                 className="grid grid-cols-3 border-t border-gray-600 pt-6 text-sm text-gray-300"

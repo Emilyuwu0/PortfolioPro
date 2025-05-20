@@ -1,11 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, } from "react";
 import Button from "@/components/Ui/Button";
 import SlideUpSection from "@/components/Util";
 
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [scrolled, setScrolled] = useState(false); 
+
 
   const navItems = [
     { label: "Home", href: "#home" },
@@ -14,15 +14,7 @@ export default function Navbar() {
     { label: "Resumen", href: "#resume" },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  
   return (
     <div className="pt-12">
 <div className="fixed top-0 w-5xl px-4 sm:px-6 z-50 transition-colors duration-300 md:block hidden">
@@ -61,7 +53,7 @@ export default function Navbar() {
   </nav>
 </div>
 
-      <div className="overflow-y-auto h-full">
+      <div className=" h-full">
         <div className="md:pt-80 px-6 sm:pt-8">
           <div className="w-full rounded-lg">
             <div>
@@ -75,7 +67,7 @@ export default function Navbar() {
               <div className="hero-section">
                 <SlideUpSection delay={300}>
                   <h1 className="hero-title text-3xl sm:text-5xl lg:text-6xl font-semibold leading-tight sm:leading-tight lg:leading-tight">
-                    I'm Emily Orduz
+                    I&apos;m Emily Orduz 
                     <br />
                     Ux and
                     <br />

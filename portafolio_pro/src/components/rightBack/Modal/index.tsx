@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Image from 'next/image';
 type Project = {
   imgProject: string;
   name: string;
@@ -14,7 +14,7 @@ type ModalProps = {
   label: string;
 };
 
-export default function Modal({ projects, onClose, label }: ModalProps) {
+export default function Modal({ projects, onClose }: ModalProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const next = () => {
@@ -53,11 +53,17 @@ export default function Modal({ projects, onClose, label }: ModalProps) {
         </div>
 
         {/* Image */}
-        <img
-          src={current.imgProject}
-          alt={current.name}
-          className="max-w-full max-h-[500px] rounded-lg mb-4 object-contain "
-        />
+<div className="relative w-full h-[500px] mb-4">
+  <Image
+    src={current.imgProject}
+    alt={current.name}
+    fill
+    className="rounded-lg object-contain"
+    style={{ objectFit: 'contain' }}
+    sizes="(max-width: 768px) 100vw, 700px"
+    priority
+  />
+</div>
 
         {/* Content */}
         <div className="bg-neutral-900 text-white p-6 rounded-2xl shadow-lg w-full">

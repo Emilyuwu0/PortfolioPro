@@ -45,7 +45,7 @@ export default function AboutMe() {
       </div>
 
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-  <div className="md:col-span-2 text-center md:text-left"> {/* Añadido text-center y md:text-left */}
+  <div className="md:col-span-2 text-center md:text-left">
     <SlideUpSection delay={900}>
       <span className="block bg-pink-soft-color">
         Soy una desarrolladora frontend con una sólida experiencia en la
@@ -61,20 +61,14 @@ export default function AboutMe() {
       </span>
     </SlideUpSection>
   </div>
-  <div className="text-center md:text-left"> {/* Añadido text-center y md:text-left */}
+  <div className="text-center md:text-left">
     <SlideUpSection delay={1100}>
       <ul className="ml-2">
         <li>
           <span className="text-sm">Nombre:</span>
           <span className="text-md font-bold block mb-4"> Emily Orduz</span>
         </li>
-        <li>
-          <span className="text-sm"> Teléfono: </span>
-          <span className="text-md font-bold block mb-4">
-            {" "}
-            315 222 5986
-          </span>
-        </li>
+      
         <li>
           <span className="text-sm">Correo: </span>
           <span className="text-md font-bold block mb-4">
