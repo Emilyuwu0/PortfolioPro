@@ -1,3 +1,4 @@
+"use client";
 
 import Navbar from "@/components/rightBack/Navbar";
 
@@ -6,29 +7,57 @@ import AboutMe from "@/components/rightBack/Sections/aboutMe";
 import Timeline from "@/components/rightBack/Sections/timeline";
 import Tools from "@/components/rightBack/Sections/toolsFav";
 import Contact from "@/components/rightBack/Sections/contact";
+import Button from "@/components/Ui/Button";
+import SlideUpSection from "@/components/Util";
 
-import "../../app/globals.css";
-
-export default function RightBack() {
+export default function RightBack({ scrollContainerRef }) {
   return (
-    <div >
-  <Navbar />
+    <div className="w-full">
+      <Navbar scrollContainerRef={scrollContainerRef} />
 
-  <div className="mt-40 ml-8 sm:ml-4 md:ml-6 lg:ml-8 xl:ml-10 paddingContainer">
+      <div className="mt-20 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-16">
 
-    <div>
-      <Projects />
-    </div>
-    <div>
-      <AboutMe />
-    </div>
-    <div>
-      <Timeline />
-    </div>
-    <Tools />
-    <Contact />
-  </div>
-</div>
+        {/* Hero Section */}
+        <div className="pt-20 sm:pt-32 pb-16 sm:pb-32" id="home">
+          <div className="w-full rounded-lg">
+            <SlideUpSection>
+              <button className="meet-button mb-4 text-sm sm:text-base md:text-lg">
+                <span>⋆ </span>
+                Comenzemos
+              </button>
+            </SlideUpSection>
 
+            <div className="hero-section">
+              <SlideUpSection delay={300}>
+                <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-snug sm:leading-tight">
+                  I'm Emily Orduz
+                  <br />
+                  Ux and
+                  <br />
+                  Frontend Developer.
+                </h1>
+              </SlideUpSection>
+
+              <SlideUpSection delay={600}>
+                <div className="flex justify-start mt-8 sm:mt-12 w-full max-w-[220px]">
+                  <a href="../../../assets/doc/CV-EmilyOrduz.docx" download>
+                    <Button colorClass="backgroundButtons mr-4 mb-4">
+                      Curriculum
+                    </Button>
+                  </a>
+                </div>
+              </SlideUpSection>
+            </div>
+          </div>
+        </div>
+
+        {/* Secciones */}
+        <Projects />
+        <AboutMe />
+        <Timeline />
+        <Tools />
+        <Contact />
+      </div>
+    </div>
   );
 }

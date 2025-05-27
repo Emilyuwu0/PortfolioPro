@@ -135,7 +135,7 @@ export default function Projects() {
   };
 
   return (
-    <div id="portfolio">
+    <div  id="portfolio" className="mt-20">
          <SlideUpSection>
       <button className="meet-button mb-4 text-sm sm:text-base">
         <span>⋆ </span>

@@ -1,7 +1,7 @@
 import SlideUpSection from "@/components/Util";
 export default function AboutMe() {
   return (
-    <div className="mb-36" id="about">
+    <div className="mb-24 sm:mt-60 sm:mb-60" id="about">
       <SlideUpSection>
         <button className="meet-button mb-4 text-sm sm:text-base">
           <span>⋆ </span>

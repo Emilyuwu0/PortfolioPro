@@ -374,6 +374,8 @@ body {
 @media (max-width: 760px) {
 .overflow-mobile{
   overflow-y: auto;
+}.navBar{
+  display: none;
 }
 }
 
@@ -441,8 +443,6 @@ body {
 
  */
 
-
-
 .container {
   display: flex;
   flex-direction: column; 
@@ -462,6 +462,9 @@ body {
 
 /* Media query para pantallas medianas (md) y superiores */
 @media (min-width: 768px) {
+  
+
+
   .container {
     display: grid;
     grid-template-columns: 1.5fr 3fr; 
@@ -492,18 +495,6 @@ body {
 }
 
 
-@media (min-width: 1024px) {
-  .leftColumn > div {
-    width: 30%; 
-  }
-}
-
-
-@media (min-width: 1280px) {
-  .leftColumn > div {
-    width: 33%; 
-  }
-}
 
 
 ::-webkit-scrollbar {
