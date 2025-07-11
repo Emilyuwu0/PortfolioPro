@@ -22,7 +22,7 @@ export default function Home() {
         className="overflow-y-auto scroll-transparent px-2 min-h-screen"
         ref={scrollRef}
       >
-        <RightBack scrollContainerRef={scrollRef} />
+<RightBack scrollContainerRef={scrollRef as React.RefObject<HTMLElement>} />
       </div>
     </div>
   );
