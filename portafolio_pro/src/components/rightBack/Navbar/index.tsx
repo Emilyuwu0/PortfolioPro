@@ -1,7 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, RefObject } from "react";
 
-export default function Navbar({ scrollContainerRef }) {
+interface NavbarProps {
+  scrollContainerRef: RefObject<HTMLElement>;
+}
+
+export default function Navbar({ scrollContainerRef }: NavbarProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [scrolled, setScrolled] = useState(false);
 

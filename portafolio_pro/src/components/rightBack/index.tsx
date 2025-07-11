@@ -1,5 +1,5 @@
 "use client";
-
+import { RefObject } from 'react';
 import Navbar from "@/components/rightBack/Navbar";
 
 import Projects from "@/components/rightBack/Sections/projects";
@@ -9,8 +9,10 @@ import Tools from "@/components/rightBack/Sections/toolsFav";
 import Contact from "@/components/rightBack/Sections/contact";
 import Button from "@/components/Ui/Button";
 import SlideUpSection from "@/components/Util";
-
-export default function RightBack({ scrollContainerRef }) {
+interface RightBackProps {
+  scrollContainerRef: RefObject<HTMLElement>;
+}
+export default function RightBack({ scrollContainerRef }: RightBackProps) {
   return (
     <div className="w-full">
       <Navbar scrollContainerRef={scrollContainerRef} />
@@ -30,7 +32,7 @@ export default function RightBack({ scrollContainerRef }) {
             <div className="hero-section">
               <SlideUpSection delay={300}>
                 <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-snug sm:leading-tight">
-                  I'm Emily Orduz
+                 I&apos;m Emily Orduz
                   <br />
                   Ux and
                   <br />
