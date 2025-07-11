@@ -42,7 +42,7 @@ export default function Modal({ projects, onClose }: ModalProps) {
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute rounded-full top-4 right-4 px-3 py-1 bg-gradient-to-br from-[#b09ffc] to-[#6d60ff] text-white outline-none border-none cursor-pointer hover:translate-y-1 hover:shadow-none active:opacity-50 transition-all flex items-center justify-center text-lg font-bold hover:scale-110 transition"
+          className="absolute rounded-full  z-40 top-4 right-4 px-3 py-1 bg-gradient-to-br from-[#b09ffc] to-[#6d60ff] text-white outline-none border-none cursor-pointer hover:translate-y-1 hover:shadow-none active:opacity-50 transition-all flex items-center justify-center text-lg font-bold hover:scale-110 transition"
         >
           ×
         </button>
@@ -74,7 +74,7 @@ export default function Modal({ projects, onClose }: ModalProps) {
             href={current.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full px-4 py-2 bg-gradient-to-br from-[#b09ffc] to-[#6d60ff] text-white font-semibold text-sm outline-none border-none cursor-pointer hover:translate-y-1 hover:shadow-none active:opacity-50 transition-all"
+            className="rounded-full z-40 px-4 py-2 bg-gradient-to-br from-[#b09ffc] to-[#6d60ff] text-white font-semibold text-sm outline-none border-none cursor-pointer hover:translate-y-1 hover:shadow-none active:opacity-50 transition-all"
           >
             Ver más
           </a>

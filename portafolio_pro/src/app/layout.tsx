@@ -9,8 +9,37 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Emi",
-  description: "Explora el portafolio de Emily Orduz, desarrolladora frontend especializada en React, Astro y diseño web responsive. Descubre proyectos modernos, UI atractivas y soluciones creativas para la web",
+title: "Emily Orduz | Desarrolladora Frontend",
+  description: "Desarrolladora Frontend con 2+ años creando interfaces intuitivas y accesibles con React, Vue y Astro. Especialista en rendimiento web, UI/UX y código limpio. ¿Necesitas un sitio web responsivo o aplicación optimizada? Contáctame.",
+  keywords: [
+    "desarrolladora frontend",
+    "portafolio React",
+    "experta en accesibilidad web",
+    "desarrollo web",
+    "UI/UX",
+    "CMS",
+    "Emily Orduz"
+  ],
+  openGraph: {
+    title: "Emily Orduz | Portafolio Frontend - Soluciones Web de Alto Impacto",
+    description: "Desarrolladora Frontend especializada en React, Vue y Astro. Proyectos con foco en accesibilidad, rendimiento y experiencia de usuario excepcional.",
+    type: "website",
+    url: "https://portfolio-pro-seven.vercel.app",
+    images: [
+      {
+        url: "https://portfolio-pro-seven.vercel.app/orduz.png",
+        width: 1200,
+        height: 630,
+        alt: "Portafolio de Emily Orduz - Desarrolladora Frontend",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emily Orduz | Desarrolladora Frontend",
+    description: "Transformo ideas en productos web rápidos, accesibles y visualmente atractivos. ¡Conoce mi trabajo!",
+    images: ["https://portfolio-pro-seven.vercel.app/orduz.png"],
+  },
 };
 
 export default function RootLayout({
