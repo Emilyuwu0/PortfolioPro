@@ -11,6 +11,8 @@ import LoanCheetah from "@/assets/projects/loancheetah.jpg";
 import Arcadia from "@/assets/projects/arcadia.webp";
 import EzCar from "@/assets/projects/ezcar.jpg";
 import AllMan from "@/assets/projects/allman.jpg";
+import Enfok2 from "@/assets/projects/enfoka2.png";
+import DragonBall from "@/assets/projects/dragonBall.jpg";
 
 import Portok from "@/assets/projects/portok.jpg";
 import Vole from "@/assets/projects/vole.jpg";
@@ -81,17 +83,35 @@ export default function Projects() {
 {
   imgProject: EzCar.src,
   name: "Ez Car Title Loans",
-  date: "Nov. 2023",
+  date: "Nov. 2024",
   description: "Desarrollo del sitio web para Ez Car Title Loans junto a Kickoff Advertising, enfocado en servicios financieros accesibles.",
   url: "https://www.ezcartitleloans.com/",
 },
 {
   imgProject: AllMan.src,
   name: "All Man Title Loans",
-  date: "Nov. 2023",
+  date: "Nov. 2024",
   description: "Colaboración con Kickoff Advertising en el desarrollo de la plataforma web para All Man Title Loans, especializada en préstamos con título de auto.",
   url: "https://www.allmantitleloans.com/",
+},
+{
+  imgProject: DragonBall.src,
+  name: "Dragon Ball Lore",
+  date: "May 2025",
+  description: "Desarrollo del sitio web para Dragon Ball Lore, una plataforma dedicada a la comunidad de fans de Dragon Ball, con recursos y contenido exclusivo.",
+  url: "https://dragon-ball-uwu.vercel.app/",
+},
+
+{
+  imgProject: Enfok2.src,
+  name: "Enfoka2 RP",
+  date: "Agt. 2025",
+  description: "Desarrollo y Diseño del sitio web para Enfoka2 RP, un servidor de roleplay en FiveM, enfocado en brindar una experiencia de usuario atractiva e informativa.",
+  url: "https://enfok2rp.com/",
 }
+
+
+
 
   ];
 

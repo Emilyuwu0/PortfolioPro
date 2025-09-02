@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import ClientWrapper from "./ClientWrapper";
 import { Poppins } from 'next/font/google';
+import "./globals.css";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -93,7 +94,7 @@ export default function RootLayout({
         }}
       />
     </div> */}
-        {children}
+       <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>
   );
