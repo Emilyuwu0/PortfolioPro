@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
 
-    <html lang="en">
+    <html lang="es">
    <body className={`${poppins.className} gradient-background`}>
    <div className="gradient-background">
   <div
