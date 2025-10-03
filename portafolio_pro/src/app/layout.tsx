@@ -21,6 +21,11 @@ title: "Emily Orduz | Desarrolladora Frontend",
     "CMS",
     "Emily Orduz"
   ],
+  robots: "index, follow",
+  authors: [{ name: "Emily Orduz" }],
+  alternates: {
+    canonical: "https://portfolio-pro-seven.vercel.app/"
+  },
   openGraph: {
     title: "Emily Orduz | Portafolio Frontend - Soluciones Web de Alto Impacto",
     description: "Desarrolladora Frontend especializada en React, Vue y Astro. Proyectos con foco en accesibilidad, rendimiento y experiencia de usuario excepcional.",
