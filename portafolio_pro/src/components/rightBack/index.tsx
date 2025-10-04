@@ -23,9 +23,9 @@ export default function RightBack({ scrollContainerRef }: RightBackProps) {
         <div className="pt-20 sm:pt-32 pb-16 sm:pb-32" id="home">
           <div className="w-full rounded-lg">
             <SlideUpSection>
-              <button className="meet-button mb-4 text-sm sm:text-base md:text-lg">
+              <button className="meet-button mb-4 text-sm sm:text-base text-white">
                 <span>⋆ </span>
-                Comenzemos
+                Comencemos
               </button>
             </SlideUpSection>
 
@@ -43,7 +43,7 @@ export default function RightBack({ scrollContainerRef }: RightBackProps) {
               <SlideUpSection delay={600}>
                 <div className="flex justify-start mt-8 sm:mt-12 w-full max-w-[220px]">
                   <a href="../../../assets/doc/CV-EmilyOrduz.docx" download>
-                    <Button colorClass="backgroundButtons mr-4 mb-4">
+                    <Button colorClass="backgroundButtons mr-6 mb-6">
                       Curriculum
                     </Button>
                   </a>

@@ -48,25 +48,25 @@ export default function Modal({ projects, onClose }: ModalProps) {
         </button>
 
         {/* Counter */}
-        <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+        <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm ">
           {currentIndex + 1} / {projects.length}
         </div>
 
         {/* Image */}
-<div className="relative w-full h-[500px] mb-4">
-  <Image
-    src={current.imgProject}
-    alt={current.name}
-    fill
-    className="rounded-lg object-contain"
-    style={{ objectFit: 'contain' }}
-    sizes="(max-width: 768px) 100vw, 700px"
-    priority
-  />
-</div>
+        <div className="relative w-full h-[500px] mb-4">
+          <Image
+            src={current.imgProject}
+            alt={current.name}
+            fill
+            className="object-contain color-bg p-6 rounded-xl"
+            style={{ objectFit: 'contain' }}
+            sizes="(max-width: 768px) 100vw, 600px"
+            priority
+          />
+        </div>
 
         {/* Content */}
-        <div className="bg-neutral-900 text-white p-6 rounded-2xl shadow-lg w-full">
+        <div className="color-bg text-white p-6 rounded-2xl shadow-lg w-full">
           <h2 className="text-xl font-semibold mb-2">{current.name}</h2>
           <p className="text-sm text-neutral-400 mb-2">{current.date}</p>
           <p className="text-sm text-neutral-300 mb-6">{current.description}</p>

@@ -28,19 +28,24 @@ export default function LeftBack() {
             <Image src={Kitty} alt="Kitty" className="w-12 h-12 object-cover" />
             <h2 className="text-2xl font-bold ml-3 leading-tight">
               Emily
-           
+
               Orduz
             </h2>
           </div>
 
           <div className="mb-6">
-            <Image src={Profile} alt="Profile" className="w-full h-auto rounded-xl" />
+            <Image
+              src={Profile}
+              alt="Profile"
+              className="w-full h-auto rounded-xl"
+              priority
+            />
           </div>
 
           <div className="mb-6">
             <h5 className="font-medium text-sm">Especialización:</h5>
             <h6 className="font-bold mb-4">UI/UX designer<br />Frontend developer</h6>
-      {/*       <h5 className="font-medium text-sm">Localización:</h5>
+            {/*       <h5 className="font-medium text-sm">Localización:</h5>
             <h6 className="font-bold">Bogotá - Colombia</h6> */}
           </div>
 
