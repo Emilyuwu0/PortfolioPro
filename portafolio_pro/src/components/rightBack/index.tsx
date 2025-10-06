@@ -34,7 +34,7 @@ export default function RightBack({ scrollContainerRef }: RightBackProps) {
                 <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-snug sm:leading-tight">
                  I&apos;m Emily Orduz
                   <br />
-                  Ux and
+                  Ux | Ui 
                   <br />
                   Frontend Developer.
                 </h1>
