@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Send } from "lucide-react";
 import SlideUpSection from "@/components/Util";
 import emailjs from "@emailjs/browser";
-
+import ShinyText from "@/components/Ui/RBits/ShinyText";
+import AnimatedContent from "@/components/Ui/RBits/AnimatedContent";
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -53,12 +54,16 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     <div className="mb-60" id="contact">
       <div className="w-full max-w-4xl">
         <div className="mt-40 mb-4">
-          <SlideUpSection>
-            <button className="meet-button mb-4 text-sm sm:text-base">
-              <span>⋆ </span>
-              Contactame
-            </button>
-          </SlideUpSection>
+           <SlideUpSection>
+        <AnimatedContent blur duration={800} easing="ease-out" initialOpacity={0}>
+          <ShinyText
+            text="⋆ Contáctame"
+            disabled={false}
+            speed={3}
+            className="shiny-button text-base sm:text-lg mb-6"
+          />
+        </AnimatedContent>
+      </SlideUpSection>
         </div>
 
         <SlideUpSection delay={200}>

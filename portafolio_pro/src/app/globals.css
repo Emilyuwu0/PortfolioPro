@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #060010;
   --foreground: #171717;
 }
 
 @theme inline {
 
   --base-tint--dark: #161616;
-  --stroke-elements--dark: #303033;
+  --stroke-elements--dark: #271e37;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #111111;
+    --background: #060010;
     --foreground: #ededed;
-    --base-tint--dark: #161616;
-    --stroke-elements--dark: #303033;
+    --base-tint--dark: #060010;
+    --stroke-elements--dark: #271e37;
     --color-principal: rgba(159, 154, 255, 0.692);
     --color-secondary: rgba(102, 0, 255, 0.397);
     --color-tertiary: rgba(134, 102, 180, 0.596);
@@ -26,7 +26,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Poppins", sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 
 /* .animated-background {
@@ -56,6 +56,7 @@ body {
 .backgroundSecondary {
   background: var(--base-tint--dark);
   border: 1px solid var(--stroke-elements--dark);
+  box-shadow: 0 100px 100px -50px #5227ff1a;
 }
 
 .radius {
@@ -64,23 +65,10 @@ body {
 }
 
 .profile {
-  overflow: hidden;
-  width: 300px;
-  height: 300px;
-  margin-bottom: 0.8rem;
+  /*    border: 0.2px solid #392e4e !important; */
+  box-shadow: 0 80px 100px -50px #5227ff1a;
 }
 
-.avatar-profile {
-  position: fixed;
-  top: 3rem;
-  left: 3rem;
-  width: 400px;
-  height: -moz-calc(100% - 4rem);
-  height: calc(100% - 4rem);
-  margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
 
 
 .scroll-indicator {
@@ -103,6 +91,19 @@ body {
   }
 }
 
+
+.shiny-button {
+  font-size: 13px;
+  background-color: #111;
+  border: 1px solid #353535;
+  border-radius: 50px;
+  padding: .6em 1.2em;
+  transition: all .3s;
+
+}
+
+
+
 .meet-button {
   border-radius: 18px;
   padding: 8px 12px;
@@ -115,7 +116,7 @@ body {
   font: normal 700 3.8rem;
   color: #6b5ea1;
   background: #6b5ea1;
-  background: linear-gradient(90deg, rgb(159, 154, 255) 0%, rgba(102, 0, 255, 1) 100%);
+  background: linear-gradient(90deg, #8660fa, #a855f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -164,9 +165,9 @@ body {
 
 .button-elegant {
   padding: 15px 15px;
-  border: 2px solid #2c2c2c;
-  background-color: #1a1a1a;
-  color: #ffffff;
+  background: #2e194e !important;
+  border: 1px solid #392e4e !important;
+  color: #b19eef;
   font-size: 1.2rem;
   cursor: pointer;
   border-radius: 15px;
@@ -175,6 +176,7 @@ body {
   position: relative;
   overflow: hidden;
   font-weight: bold;
+
 }
 
 .button-elegant::after {
@@ -185,8 +187,8 @@ body {
   width: 100%;
   height: 100%;
   background: radial-gradient(circle,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(255, 255, 255, 0) 70%);
+      #ffffff40 0%,
+      #ffffff00 70%);
   transform: scale(0);
   transition: transform 0.5s ease;
 }
@@ -197,62 +199,25 @@ body {
 
 .button-elegant:hover {
   border-color: #666666;
-  background: #292929;
+  background: #392e4e;
 }
 
 .btn {
   transition: all 0.3s ease-in-out;
-  font-family: "Dosis", sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 
 .backgroundButtons {
   background: #111111 !important;
-  border: 1px solid #474747 !important;
+  border: 1px solid #392e4e !important;
   margin-right: 10px !important;
 }
 
-.color-bg {
-  background-color: #242832 !important;
-  background: linear-gradient(0deg, #161616 0% 0%, #2d175f15 100%);
-}
-
-.backgroundCardPort {
-  border-radius: 2rem;
-  width: 100%;
-  height: 495px;
-  background: linear-gradient(0deg, #161616 0% 0%, #2d175f15 100%);
-  background-size: 100% 100%;
-  background-image: url("../assets/front.png");
-  background-size: contain;
-    background-repeat: no-repeat;
-  background-position: center;
-}
-
-.backgroundCardPortTwo {
-  border-radius: 2rem;
-  width: 100%;
-  height: 495px;
-  background: linear-gradient(0deg, #161616 0% 0%, #2d175f15 100%);
-  background-size: 100% 100%;
-  background-image: url("../assets/ux.png");
-  background-size: contain;
-    background-repeat: no-repeat;
-  background-position: center;
-}
-
-.backgroundDivAbout {
-  background-color: rgba(36, 40, 50, 1);
-  border-radius: 2rem;
-  /*   border: 1px solid #474747 !important; */
-  display: flex;
-  flex-direction: column;
-  background-image: linear-gradient(0deg, #161616 0% 0%, #2d175f15 100%);
-  align-items: center;
-}
 
 
 .backgroundTools {
-  background-image: linear-gradient(0deg, #161616 0% 0%, #2e2e2e29 100%);
+  box-shadow: 1px 5px 100px 0px #5227ff1a;
+  border: 1px solid #392e4e !important;
 }
 
 
