@@ -23,8 +23,8 @@ export default function Home() {
     scroll-transparent 
     min-h-screen 
     px-2 
-    pr-6
-    sm:pr-8 
+    pr-0
+    sm:pr-0 
     md:pr-10 
     lg:pr-14 
     xl:pr-16"
