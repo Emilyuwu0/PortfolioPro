@@ -23,10 +23,10 @@ export default function RightBack({ scrollContainerRef }: RightBackProps) {
     <div className="w-full">
 
       <div className="mt-40 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14">
-      <Navbar scrollContainerRef={scrollContainerRef} />
+        <Navbar scrollContainerRef={scrollContainerRef} />
 
 
-      {/*   <div className="pt-20 sm:pt-32 pb-16 sm:pb-32" id="home">
+        {/*   <div className="pt-20 sm:pt-32 pb-16 sm:pb-32" id="home">
           <div className="w-full rounded-lg">
             <AnimatedContent
               blur={true} duration={1000} easing="ease-out" initialOpacity={0}
@@ -80,13 +80,15 @@ export default function RightBack({ scrollContainerRef }: RightBackProps) {
             </div>
           </div>
         </div> */}
+        <div className='ml-2'>
 
-      
-        <Projects />
-        <AboutMe />
-        <Timeline />
-        <Tools />
-        <Contact />
+          <Projects />
+          <AboutMe />
+          <Timeline />
+          <Tools />
+          <Contact />
+        </div>
+
       </div>
     </div>
   );

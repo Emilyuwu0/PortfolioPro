@@ -32,11 +32,13 @@ export default function Navbar({ scrollContainerRef }: NavbarProps) {
   return (
     <div>
           
-      <div
-        className={`fixed top-0 w-full z-50 transition-colors duration-300 navBar ${
-          scrolled ? "bg-gray/80 backdrop-blur-lg " : ""
-        }`}
-      > <SlideUpSection delay={350}>
+<div
+  className={`fixed top-0 w-full z-50 navBar transition-all duration-300 ${
+    scrolled
+      ? "backdrop-blur-sm bg-black/10 shadow-sm"
+      : "bg-transparent backdrop-blur-0 shadow-none"
+  }`}
+><SlideUpSection delay={350}>
         <nav className="text-black">
           <div className=" flex flex-col md:flex-row md:items-center pb-6 pt-10 mt-8 md:pt-12 md:pb-6 md:px-0">
             <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-start md:items-center font-medium">

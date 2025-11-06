@@ -15,7 +15,7 @@ export default function LeftBack() {
         <article className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-sm xl:max-w-sm bg-gradient-to-br from-[#000000] to-[#230c47]   p-6  backdrop-blur-xl rounded-3xl border border-[#392e4e] hover:border-purple-500/30 transition-all duration-500 shadow-lg">
           {/* Header */}
           <header className="flex items-center gap-3 mb-6 mt-2">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3a1b6f] to-[#2e194e] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center">
               <span className="text-white font-bold text-lg"><Image
                 src={Kitty}
                 alt="Icon Profile"
