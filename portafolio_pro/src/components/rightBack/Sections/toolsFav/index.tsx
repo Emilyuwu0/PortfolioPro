@@ -1,4 +1,5 @@
 import SlideUpSection from "@/components/Util";
+import Image from 'next/image';
 export default function Tools() {
   const toolsArray = [
     {
@@ -42,8 +43,23 @@ export default function Tools() {
         </span>
       </SlideUpSection>
       <SlideUpSection delay={300}><p className="text-[#a194b8e6] mb-12"> Tecnologías con las que construyo experiencias increíbles</p></SlideUpSection>
-
       <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-6 mt-8 justify-items-start">
+        {toolsArray.map((tool, index) => (
+          <SlideUpSection key={tool.name} delay={index * 100}>
+            <div className="m-auto w-32 h-24 backgroundTools rounded-xl flex flex-col items-center justify-center hover:scale-105 transition-transform">
+              <Image
+                src={tool.icon}
+                alt={tool.name}
+
+                className="w-10 h-10 mb-2"
+                loading="lazy"
+              />
+              <span className="text-sm text-white">{tool.name}</span>
+            </div>
+          </SlideUpSection>
+        ))}
+      </div>
+      {/*   <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-6 mt-8 justify-items-start">
         {toolsArray.map((tool, index) => (
           <SlideUpSection key={tool.name} delay={index * 100}>
             <div className="m-auto w-32 h-24 backgroundTools rounded-xl flex flex-col items-center justify-center  hover:scale-105 transition-transform">
@@ -57,7 +73,7 @@ export default function Tools() {
             </div>
           </SlideUpSection>
         ))}
-      </div>
+      </div> */}
     </section>
 
   );
