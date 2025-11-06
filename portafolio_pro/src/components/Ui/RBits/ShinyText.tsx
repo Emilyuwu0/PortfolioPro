@@ -1,12 +1,27 @@
 import './ShinyText.css';
 
-const ShinyText = ({ text, disabled = false, speed = 5, className = '' }) => {
+interface ShinyTextProps {
+  text: string;
+  disabled?: boolean;
+  speed?: number;
+  className?: string;
+}
+
+const ShinyText: React.FC<ShinyTextProps> = ({
+  text,
+  disabled = false,
+  speed = 5,
+  className = '',
+}) => {
   const animationDuration = `${speed}s`;
 
   return (
-    <div className={`shiny-text ${disabled ? 'disabled' : ''} ${className}`} style={{ animationDuration }}>
+    <span
+      className={`shiny-text ${className} ${disabled ? 'disabled' : ''}`}
+      style={{ animationDuration }}
+    >
       {text}
-    </div>
+    </span>
   );
 };
 
