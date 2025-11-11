@@ -33,7 +33,7 @@ export default function Home() {
     scroll-transparent
   "
       >
-        <RightBack scrollContainerRef={scrollRef as React.RefObject<HTMLElement>} />
+        <RightBack />
       </div>
 
     </div>
