@@ -90,7 +90,7 @@ export default function AboutMe() {
             <p className="mt-5 text-base leading-relaxed text-white/70  text-left" >
               Apasionada por la <strong className="text-white">tecnología</strong> y la <strong className="text-white">creatividad</strong>,
               disfruto explorar tendencias en diseño digital, la <strong className="text-white">música indie</strong>, los <strong className="text-white">videojuegos</strong>
-              y la <strong className="text-white">fotografía urbana</strong>.
+              
               También participo en <strong className="text-white">comunidades tecnológicas</strong> y proyectos donde el diseño genera un impacto positivo.
             </p>
           </SlideUpSection>
