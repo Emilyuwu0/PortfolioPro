@@ -21,7 +21,7 @@ export default function Home() {
       <div
         ref={scrollRef}
         className="
-        mt-10 md:mt-24
+        mt-10 md:mt-28
     max-h-screen
     lg:h-full
     xl:h-[90%]
