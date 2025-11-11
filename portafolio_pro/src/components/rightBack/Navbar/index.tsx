@@ -1,12 +1,10 @@
 "use client";
 import SlideUpSection from "@/components/Util";
-import { useState, useEffect, RefObject } from "react";
+import { useState} from "react";
 
-interface NavbarProps {
-  scrollContainerRef: RefObject<HTMLElement>;
-}
 
-export default function Navbar({ scrollContainerRef }: NavbarProps) {
+
+export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
   /*   const [scrolled, setScrolled] = useState(false); */
 
