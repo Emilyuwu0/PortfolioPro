@@ -11,7 +11,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <div className="mb-24 sm:mt-60 sm:mb-60 scroll-mt-40" id="about">
+    <div className="mb-20 xl:mb-24 mt-20  sm:mt-40 sm:mb-60 scroll-mt-16" id="about">
       {/* Título seccional */}
       <SlideUpSection>
         <AnimatedContent blur duration={800} easing="ease-out" initialOpacity={0}>
@@ -42,7 +42,7 @@ export default function AboutMe() {
               text-white font-nunito p-6 flex flex-col justify-center items-center
               backdrop-blur-[10px] transition-all duration-500 
               hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-500/30
-              cursor-pointer overflow-hidden group/card will-change-transform backgroundTools"
+              cursor-pointer overflow-hidden group/card will-change-transform backgroundTools "
             >
               {/* Efecto de brillo */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-fuchsia-500/10 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 rounded-2xl" />
@@ -74,20 +74,20 @@ export default function AboutMe() {
         {/* Texto principal */}
         <div className="md:col-span-2 text-center md:text-left max-w-2xl mx-auto md:mx-0">
           <SlideUpSection delay={900}>
-            <p className="text-base leading-relaxed text-white/70">
+            <p className="text-base leading-relaxed text-white/70  text-left">
               Soy <strong className="text-white">Emily Orduz</strong>, una <strong className="text-white">desarrolladora frontend</strong> apasionada por crear
               <strong className="text-white"> interfaces web modernas, accesibles y funcionales</strong>.
               Combino la tecnología y el diseño para transformar ideas en experiencias digitales claras y atractivas.
             </p>
 
-            <p className="mt-5 text-base leading-relaxed text-white/70">
+            <p className="mt-5 text-base leading-relaxed text-white/70 text-left">
               Trabajo con <strong className="text-white">React</strong>, <strong className="text-white">Vue</strong> y <strong className="text-white">Gatsby</strong>,
               priorizando el <strong className="text-white">rendimiento</strong>, la <strong className="text-white">accesibilidad</strong>
               y la <strong className="text-white">experiencia de usuario</strong>.
               Mi objetivo es crear productos digitales que destaquen por su calidad y fluidez.
             </p>
 
-            <p className="mt-5 text-base leading-relaxed text-white/70">
+            <p className="mt-5 text-base leading-relaxed text-white/70  text-left" >
               Apasionada por la <strong className="text-white">tecnología</strong> y la <strong className="text-white">creatividad</strong>,
               disfruto explorar tendencias en diseño digital, la <strong className="text-white">música indie</strong>, los <strong className="text-white">videojuegos</strong>
               y la <strong className="text-white">fotografía urbana</strong>.
@@ -105,7 +105,7 @@ export default function AboutMe() {
         {/* Info personal minimalista */}
         <div className="text-center md:text-left text-white/70">
           <SlideUpSection delay={1100}>
-            <ul className="space-y-4 ml-2">
+            <ul className="grid grid-cols-1 gap-4 text-left">
               <li>
                 <span className="block text-xs uppercase tracking-wide text-white/50">Nombre</span>
                 <span className="text-base font-semibold text-white">Emily Orduz</span>

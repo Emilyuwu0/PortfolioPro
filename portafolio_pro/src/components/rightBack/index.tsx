@@ -22,7 +22,7 @@ export default function RightBack({ scrollContainerRef }: RightBackProps) {
   return (
     <div className="w-full">
 
-      <div className="mt-40 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14">
+<div className=" mt-10 sm:mt-32 xl:mt-44 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14">
         <Navbar scrollContainerRef={scrollContainerRef} />
 
 

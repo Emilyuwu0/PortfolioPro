@@ -36,9 +36,9 @@ export default function Tools() {
     },
   ];
   return (
-    <section className="py-6 px-4 mt-20">
+    <section className="py-6 mt-8 sm:mt-16 xl:mt-20">
       <SlideUpSection delay={200}>
-        <span className="text-center text-2xl sm:text-3xl lg:text-3xl font-bold leading-tight sm:leading-tight lg:leading-tight mb-3 md:text-left sm:text-center block">
+        <span className=" text-2xl sm:text-3xl lg:text-3xl font-bold leading-tight sm:leading-tight lg:leading-tight mb-3 text-left block">
           Mis herramientas favoritas
         </span>
       </SlideUpSection>
@@ -50,7 +50,8 @@ export default function Tools() {
               <Image
                 src={tool.icon}
                 alt={tool.name}
-
+                width={40}
+                height={40}
                 className="w-10 h-10 mb-2"
                 loading="lazy"
               />

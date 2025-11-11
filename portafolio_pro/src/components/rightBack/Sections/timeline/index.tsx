@@ -58,7 +58,7 @@ export default function Timeline() {
   ];
 
   return (
-    <div id="resume" className="scroll-mt-40">
+    <div id="resume" className="scroll-mt-20">
       {/* Sección título */}
       <SlideUpSection>
        <AnimatedContent blur duration={800} easing="ease-out" initialOpacity={0}>

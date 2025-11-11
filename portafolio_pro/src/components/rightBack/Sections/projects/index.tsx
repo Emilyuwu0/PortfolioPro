@@ -158,7 +158,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="mt-32 pt-6 ">
+    <section className="mt-0 md:-mt-24 pt-6 ">
       <SlideUpSection delay={300}>
         <div id="portfolio" className="scroll-mt-60">
           <AnimatedContent blur duration={800} easing="ease-out" initialOpacity={0}>
@@ -169,23 +169,22 @@ export default function Projects() {
               className="shiny-button text-base sm:text-lg mb-6"
             />
           </AnimatedContent></div>
-      </SlideUpSection>
-      <SlideUpSection delay={400}>
+      </SlideUpSection >
         <SplitText
           tag="h1"
           style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
           text="Mis proyectos destacados"
-          className="font-bold text-left block mb-4"
-          delay={100}
+          className="font-bold block mb-4"
+          textAlign="left"
+          delay={350}
           duration={0.6}
           ease="power3.out"
           splitType="chars"
           from={{ opacity: 0, y: 40 }}
           to={{ opacity: 1, y: 0 }}
           threshold={0.1}
-          rootMargin="-100px"
+          rootMargin="0px"
         />
-      </SlideUpSection>
 
       <SlideUpSection delay={550}>
         <p className="font-light text-[#a194b8e6] max-w-3xl">
@@ -195,7 +194,7 @@ export default function Projects() {
       </SlideUpSection>
 
       <SlideUpSection delay={750}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-14 mt-16 sm:mt-6 xl:mt-16 mb-36 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 gap-14 mt-16 sm:mt-6 xl:mt-16 mb-6 sm:mb-16 xl:mb-36 ">
           {[{ label: "Frontend Dev", data: frontendProjects },
           { label: "UX / UI", data: uxProjects }]
             .map(({ label, data }) => (

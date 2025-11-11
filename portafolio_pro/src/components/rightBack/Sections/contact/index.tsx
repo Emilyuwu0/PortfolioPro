@@ -51,9 +51,9 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   };
 
   return (
-    <div className="mb-60" id="contact">
+    <div className="mb-60 mt-14 sm:mt-8 xl:mt-10" id="contact">
       <div className="w-full max-w-4xl">
-        <div className="mt-40 mb-4">
+        <div className="sm:mt-6 xl:mt-40 mb-4">
            <SlideUpSection>
         <AnimatedContent blur duration={800} easing="ease-out" initialOpacity={0}>
           <ShinyText

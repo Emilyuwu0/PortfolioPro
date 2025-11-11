@@ -55,8 +55,8 @@ export default function RootLayout({
 }>) {
   return (
 
-    <html lang="es">
-   <body className={`${poppins.className} gradient-background`}>
+    <html lang="es" className="h-full">
+   <body className={`${poppins.className} h-full overflow-y-hidden`}>
    <div className="gradient-background">
   <div
     className="blur"
