@@ -1,5 +1,5 @@
 "use client";
-import { RefObject } from 'react';
+
 /* import SplitText from "../Ui/RBits/SplitText";
 import AnimatedContent from "@/components/Ui/RBits/AnimatedContent"; */
 import Navbar from "@/components/rightBack/Navbar";
@@ -13,17 +13,15 @@ import Contact from "@/components/rightBack/Sections/contact";
 import "../../app/globals.css";
 /* import ShinyText from '../Ui/RBits/ShinyText'; */
 
-interface RightBackProps {
-  scrollContainerRef: RefObject<HTMLElement>;
-}
 
 
-export default function RightBack({ scrollContainerRef }: RightBackProps) {
+
+export default function RightBack(){
   return (
     <div className="w-full">
 
 <div className=" mt-10 sm:mt-32 xl:mt-44 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14">
-        <Navbar scrollContainerRef={scrollContainerRef} />
+        <Navbar  />
 
 
         {/*   <div className="pt-20 sm:pt-32 pb-16 sm:pb-32" id="home">
