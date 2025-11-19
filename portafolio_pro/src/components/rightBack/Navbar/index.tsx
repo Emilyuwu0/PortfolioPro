@@ -1,70 +1,46 @@
 "use client";
 import SlideUpSection from "@/components/Util";
-import { useState} from "react";
-
-
+import { useState } from "react";
 
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
-  /*   const [scrolled, setScrolled] = useState(false); */
 
   const navItems = [
-
     { label: "Portafolio", href: "#portfolio" },
     { label: "Sobre mí", href: "#about" },
     { label: "Resumen", href: "#resume" },
+    { label: "Contáctame", href: "#contact" },
   ];
 
-  /*   useEffect(() => {
-      const container = scrollContainerRef?.current;
-      if (!container) return;
-  
-      const handleScroll = () => {
-        setScrolled(container.scrollTop > 50);
-      };
-  
-      container.addEventListener("scroll", handleScroll);
-      return () => container.removeEventListener("scroll", handleScroll);
-    }, [scrollContainerRef]);
-   */
   return (
-    <div>
-
-      <div
-        className="fixed top-0 w-full z-50 navBar transition-all duration-300 "
-      ><SlideUpSection delay={350}>
-          <nav className="text-black">
-            <div className=" flex flex-col md:flex-row md:items-center pb-6 pt-10 mt-8 md:pt-12 md:pb-6 md:px-0">
-              <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-start md:items-center font-medium">
-                {navItems.map((item, i) => (
-                  <li key={item.href}>
-                    <a
-                      href={item.href}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setActiveIndex(i);
-                        document
-                          .querySelector(item.href)
-                          ?.scrollIntoView({ behavior: "smooth" });
-                      }}
-                      className={`px-4 py-2 rounded-3xl transition-all hover:text-violet-200 ${activeIndex === i
-                          ? "border border-white text-white"
-                          : "text-white"
-                        }`}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+    <div className="fixed top-16 z-50">
+      <div className="hidden md:flex text-white h-15 px-[2.4rem] pl-[calc(2.4rem+6px)] rounded-[50px] border border-white/7 bg-white/5 shadow-[0_8px_32px_#1f268726] backdrop-blur-[15px]">
+        <SlideUpSection delay={350}>
+          <nav className="flex items-center mt-2 justify-center gap-8">
+            {navItems.map((item, i) => (
               <a
-                href="#contact"
-                className="hidden md:block bg-black text-white px-4 py-2 rounded-full ml-8 font-semibold mt-4 md:mt-0"
+                key={item.href}
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActiveIndex(i);
+                  document
+                    .querySelector(item.href)
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className={`px-4 py-2 rounded-3xl transition-all hover:text-violet-200 ${
+                  activeIndex === i
+                    ? " text-white"
+                    : "text-[#86848c]"
+                }`}
               >
-                ¡Contáctame!
+                {item.label}
               </a>
-            </div>
-          </nav></SlideUpSection>
+            ))}
+
+       
+          </nav>
+        </SlideUpSection>
       </div>
     </div>
   );

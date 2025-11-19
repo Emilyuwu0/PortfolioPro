@@ -116,7 +116,7 @@ body {
   font: normal 700 3.8rem;
   color: #6b5ea1;
   background: #6b5ea1;
-  background: linear-gradient(90deg, #8660fa, #a855f7);
+  background: linear-gradient(90deg, #885ffa, #a855f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -665,11 +665,3 @@ body {
 
 
 
-.scroll-transparent::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
-}
-
-.scroll-transparent {
-  -ms-overflow-style: none; /* IE y Edge antiguos */
-  scrollbar-width: none; /* Firefox */
-}

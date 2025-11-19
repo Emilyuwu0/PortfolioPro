@@ -22,7 +22,7 @@ import Respect from "@/assets/projects/xrespect2.webp";
 import SlideUpSection from "@/components/Util";
 import ShinyText from "@/components/Ui/RBits/ShinyText";
 import AnimatedContent from "@/components/Ui/RBits/AnimatedContent";
-import SplitText from "@/components/Ui/RBits/SplitText";
+
 
 type Project = {
   imgProject: string;
@@ -158,7 +158,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="mt-0 md:-mt-24 pt-6 ">
+    <section className="mt-0 md:mt-24 pt-6 ">
       <SlideUpSection delay={300}>
         <div id="portfolio" className="scroll-mt-60">
           <AnimatedContent blur duration={800} easing="ease-out" initialOpacity={0}>
@@ -170,21 +170,9 @@ export default function Projects() {
             />
           </AnimatedContent></div>
       </SlideUpSection >
-        <SplitText
-          tag="h1"
-          style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
-          text="Mis proyectos destacados"
-          className="font-bold block mb-4"
-          textAlign="left"
-          delay={350}
-          duration={0.6}
-          ease="power3.out"
-          splitType="chars"
-          from={{ opacity: 0, y: 40 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-          rootMargin="0px"
-        />
+      <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+        Gradient Text
+      </h1>
 
       <SlideUpSection delay={550}>
         <p className="font-light text-[#a194b8e6] max-w-3xl">

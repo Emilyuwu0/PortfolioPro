@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Kitty from "@/assets/code.webp";
+
 import Profile from "@/assets/profile_icon.webp";
 import Button from "@/components/Ui/Button";
 import "../../app/globals.css";
@@ -14,25 +14,14 @@ export default function LeftBack() {
       <SlideUpSection delay={350}>
         <article className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-sm xl:max-w-sm bg-gradient-to-br from-[#000000] to-[#230c47]   p-6  backdrop-blur-xl rounded-3xl border border-[#392e4e] hover:border-purple-500/30 transition-all duration-500 shadow-lg">
           {/* Header */}
-          <header className="flex items-center gap-3 mb-6 mt-2">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-lg"><Image
-                src={Kitty}
-                alt="Icon Profile"
-
-              /> </span>
-            </div>
-            <h1 className="text-white text-2xl font-[900] tracking-wide">
-              Emily Orduz
-            </h1>
-          </header>
+         
 
           {/* Imagen principal */}
           <figure className="relative mb-8">
             <Image
               src={Profile}
               alt="Foto de perfil"
-              className="w-full h-auto rounded-2xl object-cover brightness-[0.9] contrast-[1.05]"
+              className="w-full h-auto rounded-2xl object-cover brightness-[0.9] contrast-[1.05] pt-10"
               priority
             />
           </figure>

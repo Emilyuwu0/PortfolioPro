@@ -7,6 +7,10 @@ export default function Tools() {
       icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
     },
     {
+      name: "gatsby",
+      icon: "https://cdn.worldvectorlogo.com/logos/gatsby.svg",
+    },
+    {
       name: "Vue",
       icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
     },
@@ -15,9 +19,13 @@ export default function Tools() {
       icon: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
     },
     {
+      name: "CSS3",
+      icon: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
+    },
+ /*    {
       name: "Next.js",
       icon: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
-    },
+    }, */
     {
       name: "Figma",
       icon: "https://cdn.worldvectorlogo.com/logos/figma-icon.svg",
@@ -27,13 +35,13 @@ export default function Tools() {
       icon: "https://cdn.worldvectorlogo.com/logos/git-icon.svg",
     },
     {
-      name: "CSS3",
-      icon: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
-    },
-    {
       name: "Unity",
       icon: "https://cdn.worldvectorlogo.com/logos/unity-69.svg",
     },
+    {
+      name: "JavaScript",
+      icon: "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg",}
+
   ];
   return (
     <section className="py-6 mt-8 sm:mt-16 xl:mt-20">
@@ -43,19 +51,19 @@ export default function Tools() {
         </span>
       </SlideUpSection>
       <SlideUpSection delay={300}><p className="text-[#a194b8e6] mb-12"> Tecnologías con las que construyo experiencias increíbles</p></SlideUpSection>
-      <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-6 mt-8 justify-items-start">
+      <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-6 gap-6 mt-8 justify-items-start">
         {toolsArray.map((tool, index) => (
           <SlideUpSection key={tool.name} delay={index * 100}>
-            <div className="m-auto w-32 h-24 backgroundTools rounded-xl flex flex-col items-center justify-center hover:scale-105 transition-transform">
+            <div className="m-auto w-24 h-24 backgroundTools rounded-xl flex flex-col items-center justify-center hover:scale-105 transition-transform">
               <Image
                 src={tool.icon}
                 alt={tool.name}
-                width={40}
-                height={40}
-                className="w-10 h-10 mb-2"
+                width={50}
+                height={50}
+                className="w-12 h-12 "
                 loading="lazy"
               />
-              <span className="text-sm text-white">{tool.name}</span>
+           {/*    <span className="text-sm text-white">{tool.name}</span> */}
             </div>
           </SlideUpSection>
         ))}

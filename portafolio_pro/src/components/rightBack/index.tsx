@@ -16,12 +16,12 @@ import "../../app/globals.css";
 
 
 
-export default function RightBack(){
+export default function RightBack() {
   return (
     <div className="w-full">
 
-<div className=" mt-10 sm:mt-32 xl:mt-44 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14">
-        <Navbar  />
+      <div className=" mt-10 sm:mt-32 xl:mt-44 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-14">
+
 
 
         {/*   <div className="pt-20 sm:pt-32 pb-16 sm:pb-32" id="home">
@@ -79,7 +79,7 @@ export default function RightBack(){
           </div>
         </div> */}
         <div className='ml-2'>
-
+          <Navbar />
           <Projects />
           <AboutMe />
           <Timeline />

@@ -14,12 +14,12 @@ export default function ContactForm() {
 
   const [alert, setAlert] = useState({ show: false, type: "", message: "" });
 
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
     emailjs
       .send(
@@ -51,41 +51,41 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   };
 
   return (
-    <div className="mb-60 mt-14 sm:mt-8 xl:mt-10" id="contact">
-      <div className="w-full max-w-4xl">
-        <div className="sm:mt-6 xl:mt-40 mb-4">
-           <SlideUpSection>
-        <AnimatedContent blur duration={800} easing="ease-out" initialOpacity={0}>
-          <ShinyText
-            text="⋆ Contáctame"
-            disabled={false}
-            speed={3}
-            className="shiny-button text-base sm:text-lg mb-6"
-          />
-        </AnimatedContent>
-      </SlideUpSection>
+    <div className="mb-60 mt-14 sm:mt-8 xl:mt-10 border-b bg-[#060010] border border-[#271e37] rounded-[15px] justify-center items-center overflow-hidden pt-4 pb-8 px-9 gap-8" id="contact">
+      <div className="w-full max-w-4xl ">
+        <div className="sm:mt-6  mb-4 ">
+          <SlideUpSection>
+            <AnimatedContent blur duration={800} easing="ease-out" initialOpacity={0}>
+              <ShinyText
+                text="⋆ Contáctame"
+                disabled={false}
+                speed={3}
+                className="shiny-button text-base sm:text-lg mb-6"
+              />
+            </AnimatedContent>
+          </SlideUpSection>
         </div>
 
         <SlideUpSection delay={200}>
-          <h4 className="text-2xl sm:text-3xl lg:text-3xl font-semibold mb-12">
+          <h4 className="text-2xl sm:text-3xl lg:text-3xl font-semibold mb-4">
             ¡Hagamos algo increíble juntos!
           </h4>
         </SlideUpSection>
-
+        <p className="text-[#a194b8e6] mb-8">  ¿Tienes una idea, proyecto o colaboración en mente?
+          Cuéntame un poco sobre ti y te responderé lo antes posible.</p>
         {/* Alerta */}
         {alert.show && (
           <div
-            className={`mb-6 px-4 py-3 rounded-lg text-sm transition-all duration-300 ${
-              alert.type === "success"
-                ? "bg-violet-400 text-white"
-                : "bg-fuchsia-300 text-white"
-            }`}
+            className={`mb-6 px-4 py-3 rounded-lg text-sm transition-all duration-300 ${alert.type === "success"
+              ? "bg-violet-400 text-white"
+              : "bg-fuchsia-300 text-white"
+              }`}
           >
             {alert.message}
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="w-full">
+        <form onSubmit={handleSubmit} className="w-full ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <SlideUpSection delay={400}>
               <input
@@ -95,7 +95,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                 onChange={handleChange}
                 placeholder="Tu Nombre"
                 required
-                className="w-full bg-transparent border-b border-gray-500 p-2 text-white focus:outline-none focus:border-purple-300"
+                className="w-full  border-b bg-[#060010] border border-[#271e37] rounded-[15px] 0 p-4 text-white focus:outline-none focus:border-purple-300"
               />
             </SlideUpSection>
 
@@ -107,7 +107,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                 onChange={handleChange}
                 placeholder="Tu Email"
                 required
-                className="w-full bg-transparent border-b border-gray-500 p-2 text-white focus:outline-none focus:border-purple-300"
+                className="w-full  border-b bg-[#060010] border border-[#271e37] rounded-[15px]  p-4 text-white focus:outline-none focus:border-purple-300"
               />
             </SlideUpSection>
           </div>
@@ -121,7 +121,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                 placeholder="Escríbeme tu mensaje"
                 rows={4}
                 required
-                className="w-full bg-transparent border-b border-gray-500 p-2 text-white focus:outline-none focus:border-purple-300 resize-none"
+                className="w-full  border-b bg-[#060010] border border-[#271e37] rounded-[15px] p-4 text-white focus:outline-none focus:border-purple-300 resize-none"
               />
             </SlideUpSection>
           </div>
