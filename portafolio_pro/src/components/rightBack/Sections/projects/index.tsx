@@ -170,10 +170,13 @@ export default function Projects() {
             />
           </AnimatedContent></div>
       </SlideUpSection >
-      <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-        Gradient Text
-      </h1>
-
+      <SlideUpSection delay={450}>
+        <p className="text-2xl lg:text-5xl mb-4 font-bold 
+  bg-gradient-to-r from-[#6b5ea1] via-[#8605ff] to-[#9445dd]
+  bg-clip-text text-transparent gradient-animate">
+          Mis proyectos destacados
+        </p>
+      </SlideUpSection>
       <SlideUpSection delay={550}>
         <p className="font-light text-[#a194b8e6] max-w-3xl">
           Mis trabajos más recientes, donde aplico nuevas tecnologías y soluciones creativas
