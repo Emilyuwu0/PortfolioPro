@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Profile from "@/assets/profile_icon.webp";
 import Button from "@/components/Ui/Button";
-import "../../app/globals.css";
+
 import SlideUpSection from "../Util";
 
 export default function LeftBack() {
@@ -12,7 +12,7 @@ export default function LeftBack() {
 
     <section className="flex flex-col items-center justify-center h-full w-full ">
       <SlideUpSection delay={350}>
-        <article className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-sm xl:max-w-sm bg-gradient-to-br from-[#000000] to-[#230c47]   p-6  backdrop-blur-xl rounded-3xl border border-[#392e4e] hover:border-purple-500/30 transition-all duration-500 shadow-lg">
+        <article className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-sm xl:max-w-sm 2xl:max-w-xl bg-gradient-to-br from-[#000000] to-[#230c47]   p-6  backdrop-blur-xl rounded-3xl border border-[#392e4e] hover:border-purple-500/30 transition-all duration-500 shadow-lg">
           {/* Header */}
          
 

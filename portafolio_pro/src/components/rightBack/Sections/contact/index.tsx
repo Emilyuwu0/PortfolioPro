@@ -51,7 +51,11 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="mb-60 mt-14 sm:mt-8 xl:mt-10 border-b bg-[#060010] border border-[#271e37] rounded-[15px] justify-center items-center overflow-hidden pt-4 pb-8 px-9 gap-8" id="contact">
+    <div>
+       <SlideUpSection delay={200}>
+  
+    <div className="scroll-mt-44 mb-60 mt-14 sm:mt-8 xl:mt-10 border-b bg-[#060010] border border-[#271e37] rounded-[15px] justify-center items-center overflow-hidden pt-4 pb-8 px-9 gap-8" id="contact">
+
       <div className="w-full max-w-4xl ">
         <div className="sm:mt-6  mb-4 ">
           <SlideUpSection>
@@ -141,6 +145,6 @@ export default function ContactForm() {
           </div>
         </form>
       </div>
-    </div>
+    </div> </SlideUpSection> </div>
   );
 }
