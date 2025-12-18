@@ -5,6 +5,7 @@ import SlideUpSection from "@/components/Util";
 import emailjs from "@emailjs/browser";
 import ShinyText from "@/components/Ui/RBits/ShinyText";
 import AnimatedContent from "@/components/Ui/RBits/AnimatedContent";
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -12,42 +13,90 @@ export default function ContactForm() {
     message: "",
   });
 
-  const [alert, setAlert] = useState({ show: false, type: "", message: "" });
+  const [alert, setAlert] = useState<{
+    show: boolean;
+    type: "success" | "error" | "";
+    message: string;
+  }>({ show: false, type: "", message: "" });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const showError = (message: string) => {
+    setAlert({ show: true, type: "error", message });
+    setTimeout(() => setAlert({ show: false, type: "", message: "" }), 3000);
+  };
+
+  const showSuccess = (message: string) => {
+    setAlert({ show: true, type: "success", message });
+    setTimeout(() => setAlert({ show: false, type: "", message: "" }), 3000);
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const isValidEmail = (email: string) => {
+    const regex =
+      /^[a-zA-Z0-9._%+-]+@(gmail|outlook|hotmail|yahoo|icloud)\.[a-zA-Z]{2,}$/;
+
+    const blocked = [
+      "ejemplo@gmail.com",
+      "example@gmail.com",
+      "test@gmail.com",
+      "correo@gmail.com",
+      "fake@gmail.com",
+      "nadie@yahoo.com",
+    ];
+
+    if (!regex.test(email)) return false;
+    if (blocked.includes(email.toLowerCase())) return false;
+
+    return true;
+  };
+
+  const verifyEmail = async (email: string): Promise<boolean> => {
+    try {
+      const res = await fetch("/api/verify-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+      return data.isValid;
+    } catch {
+      return false;
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .send(
+    if (!isValidEmail(formData.email)) {
+      showError("Ingresa un correo válido ✉️");
+      return;
+    }
+
+    const isReal = await verifyEmail(formData.email);
+
+    if (!isReal) {
+      showError("El correo no existe o es temporal 🚫");
+      return;
+    }
+
+    try {
+      await emailjs.send(
         "service_t97ts06",
         "template_sdl3951",
         formData,
         "wbVplkvciII0N5QT_"
-      )
-      .then(() => {
-        setAlert({
-          show: true,
-          type: "success",
-          message: "Mensaje enviado correctamente! 🤍",
-        });
-        setFormData({ name: "", email: "", message: "" });
+      );
 
-        setTimeout(() => setAlert({ show: false, type: "", message: "" }), 3000);
-      })
-      .catch((error) => {
-        console.error("Error al enviar el mensaje:", error);
-        setAlert({
-          show: true,
-          type: "error",
-          message: "Hubo un error. Intenta de nuevo. ✖",
-        });
-
-        setTimeout(() => setAlert({ show: false, type: "", message: "" }), 3000);
-      });
+      showSuccess("Mensaje enviado correctamente 🤍");
+      setFormData({ name: "", email: "", message: "" });
+    } catch {
+      showError("Hubo un error al enviar el mensaje ✖");
+    }
   };
 
   return (
