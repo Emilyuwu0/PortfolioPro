@@ -12,7 +12,7 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
-
+const SIMULATE_EMAIL = true;
   const [alert, setAlert] = useState<{
     show: boolean;
     type: "success" | "error" | "";
@@ -84,116 +84,126 @@ export default function ContactForm() {
       return;
     }
 
-    try {
-      await emailjs.send(
-        "service_t97ts06",
-        "template_sdl3951",
-        formData,
-        "wbVplkvciII0N5QT_"
-      );
+   try {
+  if (SIMULATE_EMAIL) {
+    // ✅ SIMULACIÓN (NO llega nada a Gmail)
+    console.log("📧 Email simulado (NO enviado)");
+    console.log(formData);
 
-      showSuccess("Mensaje enviado correctamente 🤍");
-      setFormData({ name: "", email: "", message: "" });
-    } catch {
-      showError("Hubo un error al enviar el mensaje ✖");
-    }
+    await new Promise((r) => setTimeout(r, 1200));
+  } else {
+    // ❌ ENVÍO REAL (esto SÍ llega)
+    await emailjs.send(
+      "service_t97ts06",
+      "template_sdl3951",
+      formData,
+      "wbVplkvciII0N5QT_"
+    );
+  }
+
+  showSuccess("Mensaje enviado correctamente 🤍");
+  setFormData({ name: "", email: "", message: "" });
+} catch {
+  showError("Hubo un error al enviar el mensaje ✖");
+}
+
   };
 
   return (
     <div>
-       <SlideUpSection delay={200}>
-  
-    <div className="scroll-mt-44 mb-60 mt-14 sm:mt-8 xl:mt-10 border-b bg-[#060010] border border-[#271e37] rounded-[15px] justify-center items-center overflow-hidden pt-4 pb-8 px-9 gap-8" id="contact">
+      <SlideUpSection delay={200}>
 
-      <div className="w-full max-w-4xl ">
-        <div className="sm:mt-6  mb-4 ">
-          <SlideUpSection>
-            <AnimatedContent blur duration={800} easing="ease-out" initialOpacity={0}>
-              <ShinyText
-                text="⋆ Contáctame"
-                disabled={false}
-                speed={3}
-                className="shiny-button text-base sm:text-lg mb-6"
-              />
-            </AnimatedContent>
-          </SlideUpSection>
-        </div>
+        <div className="scroll-mt-44 mb-60 mt-14 sm:mt-8 xl:mt-10 border-b bg-[#060010] border border-[#271e37] rounded-[15px] justify-center items-center overflow-hidden pt-4 pb-8 px-9 gap-8" id="contact">
 
-        <SlideUpSection delay={200}>
-          <h4 className="text-2xl sm:text-3xl lg:text-3xl font-semibold mb-4">
-            ¡Hagamos algo increíble juntos!
-          </h4>
-        </SlideUpSection>
-        <p className="text-[#a194b8e6] mb-8">  ¿Tienes una idea, proyecto o colaboración en mente?
-          Cuéntame un poco sobre ti y te responderé lo antes posible.</p>
-        {/* Alerta */}
-        {alert.show && (
-          <div
-            className={`mb-6 px-4 py-3 rounded-lg text-sm transition-all duration-300 ${alert.type === "success"
-              ? "bg-violet-400 text-white"
-              : "bg-fuchsia-300 text-white"
-              }`}
-          >
-            {alert.message}
-          </div>
-        )}
+          <div className="w-full max-w-4xl ">
+            <div className="sm:mt-6  mb-4 ">
+              <SlideUpSection>
+                <AnimatedContent blur duration={800} easing="ease-out" initialOpacity={0}>
+                  <ShinyText
+                    text="⋆ Contáctame"
+                    disabled={false}
+                    speed={3}
+                    className="shiny-button text-base sm:text-lg mb-6"
+                  />
+                </AnimatedContent>
+              </SlideUpSection>
+            </div>
 
-        <form onSubmit={handleSubmit} className="w-full ">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <SlideUpSection delay={400}>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Tu Nombre"
-                required
-                className="w-full  border-b bg-[#060010] border border-[#271e37] rounded-[15px] 0 p-4 text-white focus:outline-none focus:border-purple-300"
-              />
+            <SlideUpSection delay={200}>
+              <h4 className="text-2xl sm:text-3xl lg:text-3xl font-semibold mb-4">
+                ¡Hagamos algo increíble juntos!
+              </h4>
             </SlideUpSection>
-
-            <SlideUpSection delay={600}>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Tu Email"
-                required
-                className="w-full  border-b bg-[#060010] border border-[#271e37] rounded-[15px]  p-4 text-white focus:outline-none focus:border-purple-300"
-              />
-            </SlideUpSection>
-          </div>
-
-          <div className="mt-8">
-            <SlideUpSection delay={800}>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Escríbeme tu mensaje"
-                rows={4}
-                required
-                className="w-full  border-b bg-[#060010] border border-[#271e37] rounded-[15px] p-4 text-white focus:outline-none focus:border-purple-300 resize-none"
-              />
-            </SlideUpSection>
-          </div>
-
-          <div className="mt-12">
-            <SlideUpSection delay={100}>
-              <button
-                type="submit"
-                className="button-profile text-gray-900 px-6 py-3 rounded-full transition duration-300 flex items-center space-x-2"
+            <p className="text-[#a194b8e6] mb-8">  ¿Tienes una idea, proyecto o colaboración en mente?
+              Cuéntame un poco sobre ti y te responderé lo antes posible.</p>
+            {/* Alerta */}
+            {alert.show && (
+              <div
+                className={`mb-6 px-4 py-3 rounded-lg text-sm transition-all duration-300 ${alert.type === "success"
+                  ? "bg-violet-400 text-white"
+                  : "bg-fuchsia-300 text-white"
+                  }`}
               >
-                <span className="flex items-center font-medium">
-                  Enviar mensaje
-                  <Send size={18} className="ml-2" />
-                </span>
-              </button>
-            </SlideUpSection>
+                {alert.message}
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="w-full ">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <SlideUpSection delay={400}>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Tu Nombre"
+                    required
+                    className="w-full  border-b bg-[#060010] border border-[#271e37] rounded-[15px] 0 p-4 text-white focus:outline-none focus:border-purple-300"
+                  />
+                </SlideUpSection>
+
+                <SlideUpSection delay={600}>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Tu Email"
+                    required
+                    className="w-full  border-b bg-[#060010] border border-[#271e37] rounded-[15px]  p-4 text-white focus:outline-none focus:border-purple-300"
+                  />
+                </SlideUpSection>
+              </div>
+
+              <div className="mt-8">
+                <SlideUpSection delay={800}>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Escríbeme tu mensaje"
+                    rows={4}
+                    required
+                    className="w-full  border-b bg-[#060010] border border-[#271e37] rounded-[15px] p-4 text-white focus:outline-none focus:border-purple-300 resize-none"
+                  />
+                </SlideUpSection>
+              </div>
+
+              <div className="mt-12">
+                <SlideUpSection delay={100}>
+                  <button
+                    type="submit"
+                    className="button-profile text-gray-900 px-6 py-3 rounded-full transition duration-300 flex items-center space-x-2"
+                  >
+                    <span className="flex items-center font-medium">
+                      Enviar mensaje
+                      <Send size={18} className="ml-2" />
+                    </span>
+                  </button>
+                </SlideUpSection>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-    </div> </SlideUpSection> </div>
+        </div> </SlideUpSection> </div>
   );
 }
