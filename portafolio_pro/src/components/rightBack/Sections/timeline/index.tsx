@@ -58,7 +58,7 @@ export default function Timeline() {
   return (
     <div id="resume" className="scroll-mt-40 mt-20 lg:mt-10">
        <SlideUpSection delay={200}>
-      <div className="bg-[#060010] border border-[#271e37] rounded-[20px] flex flex-col lg:flex-row justify-center items-center overflow-hidden lg:pt-4 pt-14 pb-2 lg:pb-4 px-9 gap-8">
+      <div className="bg-[#060010] border border-[#271e37] rounded-[20px]  flex flex-col  lg:flex-row justify-center items-center overflow-hidden lg:pt-4 pt-14 pb-2 lg:pb-4 px-9 gap-8">
         {/* Columna de texto */}
 
         <div className="flex flex-col justify-center  text-left w-full lg:w-1/2 space-y-6">
@@ -92,7 +92,8 @@ export default function Timeline() {
         </div>
 
         {/* Columna de lista */}
-        <div className="flex flex-col justify-center text-left w-full lg:w-1/2 space-y-6 pl-10">
+        <div className="flex flex-col gap-10 2xl:gap-4 justify-center text-left w-full lg:w-1/2 space-y-6 px-4 sm:px-6 
+">
           <AnimatedList
             items={experience.map(
               (exp) => `${exp.date} - ${exp.name} at ${exp.company}`

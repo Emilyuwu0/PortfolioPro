@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { AnimatePresence } from "motion/react";
 import Modal from "@/components/rightBack/Modal";
 import IPCOM from "@/assets/projects/ipcom.webp";
 import INNOVA from "@/assets/projects/innvoa.webp";
@@ -277,13 +278,15 @@ export default function Projects() {
           ))}
         </div>
       </SlideUpSection>
-      {modalOpen && selectedProjects && (
-        <Modal
-          projects={selectedProjects}
-          onClose={() => setModalOpen(false)}
-          label={selectedLabel}
-        />
-      )}
+<AnimatePresence>
+  {modalOpen && selectedProjects && (
+    <Modal
+      projects={selectedProjects}
+      onClose={() => setModalOpen(false)}
+      label={selectedLabel}
+    />
+  )}
+</AnimatePresence>
     </section>
   );
 }
