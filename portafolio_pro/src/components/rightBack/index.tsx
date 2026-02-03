@@ -7,7 +7,7 @@ import Projects from "@/components/rightBack/Sections/projects";
 import AboutMe from "@/components/rightBack/Sections/aboutMe";
 import Timeline from "@/components/rightBack/Sections/timeline";
 import Tools from "@/components/rightBack/Sections/toolsFav";
-import Contact from "@/components/rightBack/Sections/contact";
+/* import Contact from "@/components/rightBack/Sections/contact"; */
 /* import Button from "@/components/Ui/Button"; */
 /* import SlideUpSection from "@/components/Util"; */
 import "../../app/globals.css";
