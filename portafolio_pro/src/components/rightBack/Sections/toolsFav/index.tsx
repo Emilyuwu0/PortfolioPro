@@ -51,7 +51,7 @@ export default function Tools() {
         </span>
       </SlideUpSection>
       <SlideUpSection delay={300}><p className="text-[#a194b8e6] mb-12"> Tecnologías con las que construyo experiencias increíbles</p></SlideUpSection>
-      <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-6 gap-6 mt-8 justify-items-start">
+      <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-6 gap-6 mt-8 justify-items-start mb-12">
         {toolsArray.map((tool, index) => (
           <SlideUpSection key={tool.name} delay={index * 100}>
             <div className="m-auto w-24 h-24 backgroundTools rounded-xl flex flex-col items-center justify-center hover:scale-105 transition-transform">
@@ -67,6 +67,9 @@ export default function Tools() {
             </div>
           </SlideUpSection>
         ))}
+      </div>
+      <div className="mt-16">
+       <span className=" text-sm text-[#a194b8e6] bg-[#060010] border border-[#271e37] rounded-[20px] p-4 flex flex-col "> Desarrollado y Diseñado por Emily O.</span> 
       </div>
       {/*   <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-6 mt-8 justify-items-start">
         {toolsArray.map((tool, index) => (
