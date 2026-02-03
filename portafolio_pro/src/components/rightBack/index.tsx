@@ -83,7 +83,7 @@ export default function RightBack() {
           <AboutMe />
           <Timeline />
           <Tools />
-          <Contact />
+         {/*  <Contact /> */}
         </div>
       </div>
     </div>
