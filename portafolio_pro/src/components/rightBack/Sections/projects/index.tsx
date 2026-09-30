@@ -164,7 +164,7 @@ export default function Projects() {
       url: "https://www.figma.com/design/h4nl60i9V2bAYkusUwIC9Q/Vol%C3%A9-Mobile?node-id=55-284",
     },
     {
-      imgProject: Ortopedicos.src,
+      imgProject: Respect.src,
       name: "XRespect",
       date: "Abr. 2025",
       description:
