@@ -99,7 +99,7 @@ export default function LeftBack() {
           </div>
           {/* Botón */}
           <div>
-            <a href="/assets/doc/Cv-EmilyOrduzB.docx" download>
+            <a href="https://docs.google.com/document/d/1N-8N6iDW_hBjc8Xo1lTQcTk81Ft_mCur/edit?usp=sharing&ouid=108486814539810664168&rtpof=true&sd=true" download>
               <Button
                 colorClass="mr-6 mb-6 w-full cursor-pointer font-medium text-center py-4 rounded-2xl text-white font-light text-base tracking-wide transition-all duration-300 relative overflow-hidden group bg-[#3a1b6f]/40 border border-purple-500/30 hover:bg-gradient-to-br hover:from-purple-500/30 hover:to-[#2e194e]/50 hover:-translate-y-[2px] hover:shadow-[0_10px_25px_-5px_rgba(168,85,247,0.4)] backdrop-blur-lg"
               >

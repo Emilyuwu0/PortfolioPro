@@ -4,7 +4,7 @@ export default function Tools() {
   const toolsArray = [
     {
       name: "React",
-      icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+      icon: "/react.png",
     },
     {
       name: "gatsby",
@@ -12,7 +12,7 @@ export default function Tools() {
     },
     {
       name: "Vue",
-      icon: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+      icon: "/vue.png",
     },
     {
       name: "Tailwind",

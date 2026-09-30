@@ -15,6 +15,7 @@ import EzCar from "@/assets/projects/ezcar.webp";
 import AllMan from "@/assets/projects/allman.webp";
 import Enfok2 from "@/assets/projects/enfoka2.webp";
 import DragonBall from "@/assets/projects/dragonBall.webp";
+import Ortopedicos from "@/assets/projects/ortopedicos.webp";
 
 import Portok from "@/assets/projects/portok.webp";
 import Vole from "@/assets/projects/vole.webp";
@@ -127,6 +128,13 @@ export default function Projects() {
       description:
         "Desarrollo y Diseño del sitio web para Enfoka2 RP, un servidor de roleplay en FiveM, enfocado en brindar una experiencia de usuario atractiva e informativa.",
       url: "https://enfok2rp.com/",
+    }, {
+      imgProject: Ortopedicos.src,
+      name: "Ortopedicos y Salud",
+      date: "Mar. 2025",
+      description:
+        "Diseño, prototipado y desarrollo de la interfaz de usuario para la plataforma web de Ortopédicos y Salud, orientada a optimizar la experiencia del paciente y la eficiencia operativa. Adicionalmente, gestión de SEO, marketing digital, ventas al público y estructuración organizacional",
+      url: "https://www.figma.com/design/YuujVkhM9LJp2xhRsApdiB/XRespect?node-id=0-1",
     },
   ];
 
@@ -156,12 +164,20 @@ export default function Projects() {
       url: "https://www.figma.com/design/h4nl60i9V2bAYkusUwIC9Q/Vol%C3%A9-Mobile?node-id=55-284",
     },
     {
-      imgProject: Respect.src,
+      imgProject: Ortopedicos.src,
       name: "XRespect",
       date: "Abr. 2025",
       description:
         "Diseño e implementación de la interfaz de usuario para XRespect (Inventario, menus y demás), una plataforma creada para un servidor de FiveM, enfocada en la gestión de comunidad y experiencia inmersiva.",
       url: "https://www.figma.com/design/YuujVkhM9LJp2xhRsApdiB/XRespect?node-id=0-1",
+    },
+     {
+      imgProject: Ortopedicos.src,
+      name: "Ortopedicos y Salud",
+      date: "Mar. 2025",
+      description:
+        "Diseño, prototipado y desarrollo de la interfaz de usuario para la plataforma web de Ortopédicos y Salud, orientada a optimizar la experiencia del paciente y la eficiencia operativa. Adicionalmente, gestión de SEO, marketing digital, ventas al público y estructuración organizacional",
+      url: "https://www.figma.com/design/m9fDLNiO2Iz0dIpUHmZ6zj/OTP?node-id=0-1&t=PrrNmsB0R2bKWc8I-1",
     },
   ];
   const handleOpenModal = (projects: Project[], label: string) => {

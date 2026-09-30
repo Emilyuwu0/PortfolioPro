@@ -6,9 +6,15 @@ import ShinyText from "@/components/Ui/RBits/ShinyText";
 export default function Timeline() {
   const experience = [
     {
+      id: "8",
+      name: "UX/UI , CMS, Frontend Developer, Marketing & Growth",
+      date: "Mar. 2026 – Actualidad",
+      company: "Ortopedicos y Salud · Jornada completa",
+    },
+    {
       id: "7",
       name: "UX/UI & Frontend Developer",
-      date: "Ene. 2025 – Actualidad",
+      date: "Ene. 2025 – Ene. 2026",
       company: "Freelance · Proyectos internacionales",
     },
     {
